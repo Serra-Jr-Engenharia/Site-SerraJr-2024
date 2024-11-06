@@ -1,21 +1,24 @@
 import React from "react"
 import Membros from '../../../../Assets/Home/membros-2.webp'
 
-import {Container, TextContainer, Titulo, TextAbout, Image} from './style'
+import {Container, TextContainer, TextAbout, Image, Title, Retangulo, TitleContainer} from './style'
 
 const SobreNos: React.FC = () => {
     return (
         <Container>
             <TextContainer>
-                <Titulo>Nossa História</Titulo>
+                <TitleContainer>
+                    <Title>NOSSA HISTÓRIA</Title>
+                    <Retangulo></Retangulo>
+                </TitleContainer>
                 <TextAbout>
-                A Serra Jr. Engenharia, fundada em 2002 por alunos de Engenharia Mecânica e de Computação do IPRJ/UERJ,
-                busca promover a inserção dos estudantes no mercado empresarial. Após uma pausa em 2011 devido à tragédia
-                climática em Nova Friburgo, retomou suas atividades em 2013 e hoje oferece soluções inovadoras em engenharia
-                para o mercado.
+                A SERRA JR. ENGENHARIA, FUNDADA EM 2002 POR ALUNOS DE ENGENHARIA MECÂNICA E DE COMPUTAÇÃO DO IPRJ/UERJ,
+                BUSCA PROMOVER A INSERÇÃO DOS ESTUDANTES NO MERCADO EMPRESARIAL. APÓS UMA PAUSA EM 2011 DEVIDO À TRAGÉDIA
+                CLIMÁTICA EM NOVA FRIBURGO, RETOMOU SUAS ATIVIDADES EM 2013 E HOJE OFERECE SOLUÇÕES INOVADORAS EM ENGENHARIA
+                PARA O MERCADO.
                 </TextAbout>
             </TextContainer>
-            <Image src={Membros}></Image>
+            <Image src={Membros} alt="Membros Serra Jr."></Image>
         </Container>
     )
 }
