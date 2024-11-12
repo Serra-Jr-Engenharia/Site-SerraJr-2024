@@ -35,11 +35,10 @@ export const HeaderStyle = styled.div`
 
     @media screen and (max-width: ${width.notebook}){
         justify-content: space-between;
-        align-items: center;
+        align-items: center; 
     }
 `;
 
 export const MenuButtonContainer = styled.div`
     margin-right: 7%;
-`;
 `;  

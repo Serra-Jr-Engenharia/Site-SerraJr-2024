@@ -1,5 +1,6 @@
-import { HeaderStyle } from "./style";
-import LogoSiteSerra from "../../Assets/Global/LogoSiteSerraJr.svg"
+import React, { useState} from "react";
+import LogoSiteSerra from "../../Assets/Global/LogoSiteSerraJr.svg";
+
 
 import DesktopNavBar from '../Components/DesktopNavBar';
 import MobileNavBar from '../Components/MobileNavBar';
@@ -21,7 +22,7 @@ const Header: React.FC = () =>{
         <HeaderStyle>
             
             <Link to="/">
-                <HeaderImg src={LogoSerraJr} alt="Logo Serra Jr" />
+                <HeaderImg src={LogoSiteSerra} alt="Logo Serra Jr" />
             </Link>
 
             <MenuButtonContainer onClick={() => {setToggleMenu(!toggleMenu)}}>
@@ -30,7 +31,7 @@ const Header: React.FC = () =>{
             
             <DesktopNavBar />
 
-            <MobileNavBar status={toggleMenu} toogle={setToggleMenu}/>
+            <MobileNavBar status={toggleMenu} toggle={setToggleMenu}/>
 
         </HeaderStyle>
     )
