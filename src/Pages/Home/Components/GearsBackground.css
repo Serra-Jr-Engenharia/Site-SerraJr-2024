@@ -1,0 +1,39 @@
+.gears-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+/* Estilos para as engrenagens */
+.gear {
+  position: absolute;
+  transition: transform 0.5s ease;
+  opacity: 0.7; 
+}
+
+.gear1 {
+  width: 100px;
+  top: 20%;
+  left: 30%;
+}
+
+.gear2 {
+  width: 150px;
+  top: 50%;
+  left: 50%;
+}
+
+.gear3 {
+  width: 120px;
+  top: 70%;
+  left: 20%;
+}
+
+/* Rotação no hover */
+.gear:hover {
+  transform: rotate(360deg);
+}
