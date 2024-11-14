@@ -6,6 +6,7 @@ import GearsBackground from './Components/GearsBackground';
 
 
 import { Content } from './style'
+import Slider from './Components/Slider'
 
 const Home: React.FC = () =>{
     return(
@@ -14,6 +15,7 @@ const Home: React.FC = () =>{
             <Computacao/>
             <Mecanica/>
             <SobreNos/>
+            <Slider/>
             <GearsBackground />
         </Content>
     )
