@@ -11,7 +11,6 @@ import Slider from './Components/Slider'
 const Home: React.FC = () =>{
     return(
         <Content>
-            <p>Teste2</p>
             <Computacao/>
             <Mecanica/>
             <SobreNos/>
