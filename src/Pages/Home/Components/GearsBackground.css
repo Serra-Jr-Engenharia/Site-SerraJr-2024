@@ -1,53 +1,96 @@
 .gears-background {
   position: absolute;
-  top: 0;
+  top: 850px;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
   overflow: hidden;
-  pointer-events: none; 
+  pointer-events: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    to left bottom,
+    rgba(4, 173, 215, 0.103) 42%,
+    rgba(253, 99, 0, 0.1) 70%
+  );
 }
 
 .gears-container {
-  margin-top: 70px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
 
+/* Engrenagens */
 .gear {
   position: absolute;
   pointer-events: none;
   transition: transform 0.5s ease;
-  opacity: 70%;
+  opacity: 10%;
 }
 
-
-.gear1 {
-  width: 112px;
-  top: 117px;
-  right: 191px;
+.gear1 { /* gigante da esquerda em baixo de baixa opacidade */
+  width: 500px;
+  top: 350px;
+  right: 1490px;
+  opacity: 5%;
 }
 
-.gear2 {
-  width: 160px;
-  top: 122px;
+.gear2 { /* gigante da esqueerda cima */
+  width: 650px;
+  top: -268px;
+  right: 1399px;
+}
+
+.gear3 { /* menorzin da esquerda do lado do gigante */
+  width: 100px;
+  top: 420px;
+  right: 940px;
+}
+
+.gear4 { /* gigante tbm */
+  width: 490px;
+  top: 260px;
   right: 50px;
 }
 
-.gear3 {
-  width: 70px;
-  top: 283px;
-  right: 239px;
+.gear5 { /* gigante central */
+  width: 480px;
+  top: 0px;
+  right: 470px;
 }
 
-.gear4 {
-  width: 100px;
-  top: 248px;
-  right: 143px;
+.gear6 { /* ta la da direita quase sumindo */
+  width: 400px;
+  top: 0px;
+  right: -300px;
 }
 
+.gear7 { /* primeiro menor da esquerda(acima do celular) */
+  width: 105px;
+  top: 230px;
+  right: 1290px;
+}
+
+.gear8 { /* segundo menor(mediano) da esquerda(ele ta centralizado) */
+  width: 200px;
+  top: 200px;
+  right: 1000px;
+}
+
+.gear9 { /* medianin da esquerda, acima do mediano */
+  width: 200px;
+  top: -30px;
+  right: 940px;
+}
+
+.gear10 { /* menorzinho da direita no alto */
+  width: 260px;
+  top: -20px;
+  right: 190px;
+}

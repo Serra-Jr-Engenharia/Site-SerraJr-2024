@@ -15,6 +15,7 @@ import {
 } from './style';
 
 const Header: React.FC = () =>{
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [toggleMenu, setToggleMenu] = useState(false)
     
     return(
