@@ -1,8 +1,7 @@
 import React, { useState} from "react";
-import LogoSiteSerra from "../../../Assets/Global/LogoSiteSerraJr.svg"
+import LogoSiteSerra from "../../../Assets/Global/LogoSiteSerraJr.svg";
 
-
-// import DesktopNavBar from '../Components/DesktopNavBar';
+import DesktopNavBar from '../Components/DesktopNavBar';
 // import MobileNavBar from '../Components/MobileNavBar';
 // import MenuButton from '../Components/MenuButton';
 
@@ -29,10 +28,9 @@ const Header: React.FC = () =>{
                 {/* <MenuButton status={toggleMenu}/> */}
             {/* </MenuButtonContainer> */}
             
-            {/* <DesktopNavBar /> */}
+            <DesktopNavBar />
 
             {/* <MobileNavBar status={toggleMenu} toggle={setToggleMenu}/> */}
-
         </HeaderStyle>
     )
 }

@@ -14,7 +14,7 @@ import {
 import LogoSerra from "../../Assets/Global/LogoSerra.svg";
 import Instagram from "../../Assets/Global/instagram.svg";
 import Facebook from "../../Assets/Global/facebook.svg";
-import Linkedin from "../../Assets/Global/linkedin.svg";
+import Linkedin from '../../Assets/Global/linkedin.svg'
 import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {

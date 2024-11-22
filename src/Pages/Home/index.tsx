@@ -2,8 +2,7 @@ import React from 'react'
 import Computacao from './Components/Computacao'
 import Mecanica from "./Components/Mecanica"
 import SobreNos from './Components/SobreNos'
-import GearsBackground from './Components/GearsBackground';
-
+import Banner from "./Components/Banner"
 
 import { Content } from './style'
 import Slider from './Components/Slider'
@@ -11,11 +10,11 @@ import Slider from './Components/Slider'
 const Home: React.FC = () =>{
     return(
         <Content>
+            <Banner/>
             <Computacao/>
             <Mecanica/>
             <SobreNos/>
             <Slider/>
-            <GearsBackground />
         </Content>
     )
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Title, Text, Card, Button, CardContainer, RightContent, LeftContent, Image, Icon } from "./style";
 import Computador from "../../../../Assets/Computador.png";
-import Manutencao from "../../../../Assets/manutencao.svg";
-import Desenho from "../../../../Assets/desenho.svg"
-import Mask from "../../../../Assets/Mask.svg"
-import Printer from "../../../../Assets/3dprinter.svg"
+import ImageManutencao from '../../../../Assets/manutencao.svg';
+import ImageAutomacao from '../../../../Assets/automacao.svg';
+import ImageDesenho from '../../../../Assets/desenho.svg'
+import ImagePrototipagem from '../../../../Assets/prototipagem.svg'
 
 
 const Mecanica: React.FC = () => {
@@ -15,12 +15,12 @@ const Mecanica: React.FC = () => {
                 <Text>Projeto e manutenção de equipamentos, elaboração de desenhos técnicos em CAD, desenvolvimentos de automação com tecnologias da indústria 4.0 e criação de protótipos de baixo custo com impressoras 3D e CNC.</Text>
 
                 <CardContainer>
-                    <Card><Icon src={Manutencao}/>Projeto e Manutenção de Equipamentos</Card>
-                    <Card><Icon src={Mask}/>Projetos de Automação</Card>
+                    <Card><Icon src={ImageManutencao}/>Projeto e <br />Manutenção de <br />Equipamentos</Card>
+                    <Card><Icon src={ImageAutomacao}/>Projetos de <br />Automação</Card>
                 </CardContainer>
                 <CardContainer>
-                    <Card><Icon src={Desenho}/>Desenho Técnico e Industrial</Card>
-                    <Card><Icon src={Printer}/>Prototipagem</Card>
+                    <Card><Icon src={ImageDesenho}/>Desenho Técnico e Industrial</Card>
+                    <Card><Icon src={ImagePrototipagem}/>Prototipagem</Card>
                 </CardContainer>
                 
                 <Button>Saiba Mais</Button>

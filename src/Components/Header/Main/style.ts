@@ -28,9 +28,9 @@ export const HeaderImg = styled.img`
 export const HeaderStyle = styled.div`
     width: 100%;
     height: 17vh;
-    background-color: #001830;
+    background-color: #000D1A;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 
     @media screen and (max-width: ${width.notebook}){
@@ -41,4 +41,28 @@ export const HeaderStyle = styled.div`
 
 export const MenuButtonContainer = styled.div`
     margin-right: 7%;
-`;  
+`;
+
+export const HeaderTextSection = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: #000D1A;
+    width: 100%;
+    padding: 20px 0;
+    color: #fff;
+`;
+
+
+
+//  {
+//     font-size: 1.8rem;
+//     font-weight: bold;
+//     margin: 0;
+// }
+
+
+
+
+    

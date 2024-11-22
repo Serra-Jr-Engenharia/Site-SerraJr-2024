@@ -27,6 +27,8 @@ export const Title = styled.p `
 
 export const Text = styled.p `
     color: #505050;
+    font-size: 18px;
+    width: 800px;
 
 
 `;
@@ -38,10 +40,14 @@ export const Card = styled.div `
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
-    width: 350px;
+    width: 300px;
     height: 60px;
     margin: 20px 0px;
     color: #000D19;
+    padding: 20px 0px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
     
 
 
@@ -50,7 +56,7 @@ export const Card = styled.div `
 export const CardContainer = styled.div `
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 700px;
 
 
 
@@ -69,16 +75,19 @@ export const Button = styled.button `
 `;
 
 export const Image = styled.img `
-    margin-top: -100px;
-    width: 450px;
+    margin-top: -70px;
+    margin-left: 30px;
+    width: 500px;
 
 `;
 
 export const Icon = styled.img `
-    width: 50px;
+    width: 60px;
     display: flex;
     margin-right: 10px;
     background-color: #000D19;
+    border-radius: 100%;
+    padding: 3px;
     
 
 
