@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Title, Text, Card, Button, CardContainer, RightContent, LeftContent, Image, Icon } from "./style";
-import Celular from "../../../../Assets/Celular.png"
-import Phone from "../../../../Assets/phone.svg"
-import Website from "../../../../Assets/website.svg"
-import WebSystem from "../../../../Assets/webSystem.svg"
+import Celular from "../../../../Assets/Home/Celular.png"
+import Phone from "../../../../Assets/Home/phone.svg"
+import Website from "../../../../Assets/Home/website.svg"
+import WebSystem from "../../../../Assets/Home/webSystem.svg"
 
 const Computacao: React.FC = () => {
     return(

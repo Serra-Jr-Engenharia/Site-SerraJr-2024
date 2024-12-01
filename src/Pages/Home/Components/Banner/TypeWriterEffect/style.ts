@@ -16,8 +16,6 @@ export const SloganTextContainer = styled.div`
         color: orange;
         font-weight: 700;
         animation: blink 0.5s infinite;
-
-
     }
 
     @keyframes blink {

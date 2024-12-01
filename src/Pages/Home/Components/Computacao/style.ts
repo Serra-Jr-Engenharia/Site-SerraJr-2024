@@ -28,7 +28,6 @@ export const Text = styled.p `
 export const Card = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
@@ -36,6 +35,7 @@ export const Card = styled.div`
     height: 60px;
     margin: 20px 0px;
     color: #000D19;
+    padding: 0 15px;
 `
 
 export const CardContainer = styled.div`

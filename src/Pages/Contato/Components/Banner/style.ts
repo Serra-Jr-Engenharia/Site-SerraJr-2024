@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from '../../../../Assets/bannerOnda.png'
+import background from '../../../../Assets/bannerOnda3.png'
 
 export const Presentation = styled.div`
   background-image: url(${background});
@@ -11,16 +11,22 @@ export const Presentation = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
-  height: 80vh;
+  height: 65vh;
 `;
 
-export const Slogan = styled.div`
-  display: block;
-  justify-content: left;
-  flex-direction: column;
-  width: 55%;
-  text-align: left;
-  margin-right: 20%;
-  margin-top: 9%;
+
+
+export const Slogan = styled.p`
+  font-size: 55px;
+  font-family: 'Poppins';
+  font-weight: 600;
+  display: flex;
+  margin-top: 8%;
+  margin-left: 5%;
 `;
 
+export const BannerImg = styled.img`
+  width: 400px;
+  height: 400px;
+  margin-right: 5%;
+`;

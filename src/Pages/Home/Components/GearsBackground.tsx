@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import "./GearsBackground.css";
-import gear1 from "../../../Assets/gear1.svg";
-import gear2 from "../../../Assets/gear2.svg";
-import gear3 from "../../../Assets/gear3.svg";
-import gear4 from "../../../Assets/gear4.svg";
-import gear5 from "../../../Assets/gear5.svg";
-import gear6 from "../../../Assets/gear6.svg";
-import gear7 from "../../../Assets/gear7.svg";
-import gear8 from "../../../Assets/gear8.svg";
-import gear9 from "../../../Assets/gear9.svg";
-import gear10 from "../../../Assets/gear10.svg";
+import gear1 from "../../../Assets/Home/gear1.svg"
+import gear2 from "../../../Assets/Home/gear2.svg"
+import gear3 from "../../../Assets/Home/gear3.svg"
+import gear4 from "../../../Assets/Home/gear4.svg"
+import gear5 from "../../../Assets/Home/gear5.svg"
+import gear6 from "../../../Assets/Home/gear6.svg"
+import gear7 from "../../../Assets/Home/gear7.svg"
+import gear8 from "../../../Assets/Home/gear8.svg"
+import gear9 from "../../../Assets/Home/gear9.svg"
+import gear10 from "../../../Assets/Home/gear10.svg"
 
 const GearsBackground: React.FC = () => {
   useEffect(() => {
