@@ -73,6 +73,18 @@ export const Button = styled.button `
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &: hover{
+        background-color: #04ADD7;
+        transform: scale(1.05);
+        box-shadow: 0px 5px 15px rbga( 0, 0, 0, 0.3);
+    }
+
+    &:active{
+        transform: scale(0.98);
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
 
 `;
 

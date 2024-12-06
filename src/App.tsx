@@ -6,6 +6,8 @@ import Sobre from './Pages/Sobre/index';
 import Contato from './Pages/Contato/index';
 import Header from './Components/Header/Main/index';
 import Footer from './Components/Footer/index';
+import Computacao from './Pages/Computacao/index';
+import Mecanica from './Pages/Mecanica/index';
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/quemSomos" element={<Sobre />} />
             <Route path="/contatos" element={<Contato />} />
+            <Route path="/computacao" element={<Computacao />} />
+            <Route path="/mecanica" element={<Mecanica />} />
         </Routes>
         <Footer />
       </Router> 

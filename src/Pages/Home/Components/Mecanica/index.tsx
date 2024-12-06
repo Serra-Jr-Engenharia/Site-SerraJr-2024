@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Container, Title, Text, Card, Button, CardContainer, RightContent, LeftContent, Image, Icon, CardText } from "./style";
 import Computador from "../../../../Assets/Home/Computador.png";
 import ImageManutencao from '../../../../Assets/Home/manutencao.svg';
@@ -7,6 +8,13 @@ import ImageDesenho from '../../../../Assets/Home/desenho.svg';
 import ImagePrototipagem from '../../../../Assets/Home/prototipagem.svg';
 
 const Mecanica: React.FC = () => {
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate("/Mecanica");
+        };
+
+
     return(
         <Container>
             <LeftContent>
@@ -34,7 +42,7 @@ const Mecanica: React.FC = () => {
                     </Card>
                 </CardContainer>
                 
-                <Button>Saiba Mais</Button>
+                <Button onClick={handleButtonClick}>Saiba Mais</Button>
             </LeftContent>
             
             <RightContent> 

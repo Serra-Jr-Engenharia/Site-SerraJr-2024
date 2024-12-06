@@ -17,9 +17,12 @@ import { Content,
     InformationText,
     Container
  } from './style'
+import Slider from './Components/Slider'
+import Mapa from './Components/Map/index'
 
 const Contato: React.FC = () =>{
     return(
+        <>
         <Content>
             <Banner/>
             <Container>
@@ -27,7 +30,7 @@ const Contato: React.FC = () =>{
                     <Input type="text" placeholder="Nome Completo"/>
                     <Input type="email" placeholder="E-mail" />
                     <Input type="tel" placeholder="Telefone" />
-                    <Textarea placeholder="Mensagem" rows="4"></Textarea>
+                    <Textarea placeholder="Mensagem" rows={1}></Textarea>
                     <Button>Enviar</Button>
                 </FormContainer>
                 <InformationContainer>
@@ -49,7 +52,11 @@ const Contato: React.FC = () =>{
                     </InformationCont>
                 </InformationContainer>
             </Container>
+            <Mapa />
+            <Slider/>
         </Content>
+        
+        </>
     )
 }
 

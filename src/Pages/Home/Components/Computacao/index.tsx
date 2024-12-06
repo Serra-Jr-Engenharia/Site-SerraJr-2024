@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Container, Title, Text, Card, Button, CardContainer, RightContent, LeftContent, Image, Icon } from "./style";
 import Celular from "../../../../Assets/Home/Celular.png"
 import Phone from "../../../../Assets/Home/phone.svg"
@@ -6,6 +7,11 @@ import Website from "../../../../Assets/Home/website.svg"
 import WebSystem from "../../../../Assets/Home/webSystem.svg"
 
 const Computacao: React.FC = () => {
+    const navigate = useNavigate();
+    
+    const handleButtonClick = () => {
+        navigate("/Computacao");
+            };
     return(
         <Container>
             <LeftContent>
@@ -21,7 +27,7 @@ const Computacao: React.FC = () => {
                 <CardContainer>
                     <Card> <Icon src={Phone}/>Desenvolvimento de Aplicativos</Card>
                 </CardContainer>
-                <Button>Saiba Mais</Button>
+                <Button onClick={handleButtonClick}>Saiba Mais</Button>
             </RightContent>
         </Container>
     )

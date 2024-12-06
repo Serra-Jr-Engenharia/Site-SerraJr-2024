@@ -1,31 +1,52 @@
-import React from "react"
+import React, { useRef } from "react"
 import Membros from '../../../../Assets/Home/membros-2.webp'
 import SetaEsquerda from '../../../../Assets/AboutUs/setaEsquerda.png';
 import SetaDireita from '../../../../Assets/AboutUs/setaDireita.png';
 
 import {Container, TextAbout, TextContainer, Image, Retangulo, CardContainer, Title, CarouselContainer, Botao} from './style'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+
 const Historia: React.FC = () => {
+    const prevRef = useRef<HTMLButtonElement>(null);
+    const nextRef = useRef<HTMLButtonElement>(null);
+
+
     return (
         <Container>
             <Title>NOSSA HISTÓRIA</Title>
             <Retangulo></Retangulo>
             <CarouselContainer>
-                <Botao>
+                <Botao ref={prevRef}>
                     <img src={SetaEsquerda} width={60} height={60}></img>
                 </Botao>
-                <CardContainer>
-                    <TextContainer>
-                        <TextAbout>
-                        A Serra Jr. Engenharia, é uma Empresa Júnior vinculada ao Instituto Politécnico da Universidade
-                        do Estado do Rio de Janeiro, localizada em Nova Friburgo. Tem como escopo a prestação de serviços
-                        como prototipagem, automação, desenho técnico industrial, projeto e manutenção de equipamentos e o
-                        desenvolvimento de websites e sistemas web.
-                        </TextAbout>
-                    </TextContainer>
-                    <Image src={Membros} alt="Membros Serra Jr."></Image>
-                </CardContainer>
-                <Botao>
+                <Swiper
+                    modules={[Navigation]}
+                    navigation={{
+                        prevEl: prevRef.current,
+                        nextEl: nextRef.current,
+                    }}
+                    
+                >
+                    <SwiperSlide>
+                        <CardContainer>
+                            <TextContainer>
+                                <TextAbout>
+                                A Serra Jr. Engenharia, é uma Empresa Júnior vinculada ao Instituto Politécnico da Universidade
+                                do Estado do Rio de Janeiro, localizada em Nova Friburgo. Tem como escopo a prestação de serviços
+                                como prototipagem, automação, desenho técnico industrial, projeto e manutenção de equipamentos e o
+                                desenvolvimento de websites e sistemas web.
+                                </TextAbout>
+                            </TextContainer>
+                            <Image src={Membros} alt="Membros Serra Jr."></Image>
+                        </CardContainer>
+                    </SwiperSlide>
+                    
+                </Swiper>
+                <Botao ref={nextRef}>
                     <img src={SetaDireita}  width={60} height={60}></img>
                 </Botao>
             </CarouselContainer>

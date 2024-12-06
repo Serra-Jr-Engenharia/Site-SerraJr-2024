@@ -75,6 +75,7 @@ export const Slogan = styled.h2`
   font-size: 55px;
   font-family: 'Poppins';
   font-weight: 600;
+  margin-left: 15%;
   display: flex;
   margin-top: 8%;
   color: white;
@@ -86,3 +87,24 @@ export const CardsContainer = styled.div`
   margin: 0 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 `
+
+export const IconContainer = styled.div`
+  width: 100%;
+`
+
+
+export const ImageLeft = styled.img`
+  position: absolute;
+  width: 450px;
+  height: auto;
+  top: 600px;
+  margin-left: 1600px;
+`;
+
+export const ImageRight = styled.img`
+  position: absolute;
+  width: 450px;
+  height: auto;
+  top: 1100px;
+  margin-right: 1500px;
+`;
