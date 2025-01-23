@@ -4,17 +4,15 @@ export const Container = styled.div `
     display: flex;
     justify-content: center;
     margin-top: 50px;
+
+    width: 100%;
 `;
 
 export const LeftContent = styled.div `
     width: 50%;
-
 `;
 
 export const RightContent = styled.div `
-    margin-right: 100px;
-
-
 `;
 
 export const Title = styled.p `
@@ -59,6 +57,7 @@ export const CardContainer = styled.div `
     display: flex;
     justify-content: space-between;
     width: 100%;
+    gap: 20px;
 
 
 

@@ -6,8 +6,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 1000px;
-
-    margin: 200px 0;
+    margin: 100px 0;
 `
 
 export const CardContainer = styled.div`

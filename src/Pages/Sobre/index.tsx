@@ -6,11 +6,11 @@ import Img from '../../Assets/AboutUs/SobreNos.png'
 import valoresIcon from '../../Assets/valores.png'
 import visaoIcon from '../../Assets/visao.png'
 import missaoIcon from '../../Assets/missao.png'
-import sobreFormaDireita from '../../Assets/SobreFormaDireita.png'
-import sobreFormaEsquerda from '../../Assets/SobreFormaEsquerda.png'
+// import sobreFormaDireita from '../../Assets/SobreFormaDireita.png'
+// import sobreFormaEsquerda from '../../Assets/SobreFormaEsquerda.png'
 
 import { Content, Banner, Slogan, Text, Card, Title, CardsContainer, BannerImg, IconContainer } from './style'
-import { ImageLeft, ImageRight } from './style';
+// import { ImageLeft, ImageRight } from './style';
 
 import Slider from './Components/Slider'
 
@@ -20,8 +20,8 @@ const Sobre: React.FC = () =>{
             <Banner>
                 <BannerImg src={Img}/>
                 <Slogan>Sobre nós</Slogan>
-                <ImageRight src={sobreFormaDireita} alt="Forma Direita" />
-                <ImageLeft src={sobreFormaEsquerda} alt="Forma Esquerda" />
+                {/* <ImageRight src={sobreFormaDireita} alt="Forma Direita" />
+                <ImageLeft src={sobreFormaEsquerda} alt="Forma Esquerda" /> */}
 
             </Banner>
             

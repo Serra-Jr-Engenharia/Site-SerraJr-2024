@@ -4,6 +4,7 @@ export const Container = styled.div `
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    width: 100%;
 `
 
 export const RightContent = styled.div `
@@ -31,7 +32,7 @@ export const Card = styled.div`
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
-    width: 350px;
+    width: 320px;
     height: 60px;
     margin: 20px 0px;
     color: #000D19;
@@ -40,8 +41,8 @@ export const Card = styled.div`
 
 export const CardContainer = styled.div`
     display: flex;
-    justify-content: space-between;
     width: 100%;
+    gap: 20px;
 `
 
 export const Button = styled.button`
