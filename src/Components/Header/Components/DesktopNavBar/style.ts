@@ -65,13 +65,13 @@ export const SubMenuContainerSon = styled.div<Props>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #999999;
-    top: 17vh;
+    background-color:rgb(4, 2, 28);
+    top: 14vh;
     width: 20vw;
     border-radius: 0px 0px 20px 20px;
     
     ${({activeStyle}) => activeStyle ?
-        `opacity: 0.9;
+        `opacity: 0.99;
         visibility: visible;
         transition: opacity 0.5s;`
         :

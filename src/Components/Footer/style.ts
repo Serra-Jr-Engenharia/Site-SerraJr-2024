@@ -17,6 +17,12 @@ export const FooterStyle = styled.div`
   justify-content: space-between;
   align-items: center;
   color: white;
+
+  @media (max-width: 1100px) {
+
+    height: 50%;
+    flex-direction: column;
+  }
 `;
 
 export const LogosSection = styled.div`
@@ -33,6 +39,12 @@ export const InfosSection = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    margin: 30px 0;
+    gap: 20px;
+  }
 `;
 
 export const InfoSection = styled.div`
@@ -55,6 +67,7 @@ export const InfoSection = styled.div`
 export const LinhaHorizontal = styled.hr`
   width: 100%;
   height: 1 px;
+
 `;
 
 export const CopyRight = styled.div`
@@ -64,5 +77,17 @@ export const CopyRight = styled.div`
 
   p {
     font-weight: 700;
+  }
+
+  @media (max-width: 1100px) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
   }
 `;

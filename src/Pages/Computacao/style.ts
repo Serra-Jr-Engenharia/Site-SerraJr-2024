@@ -15,3 +15,18 @@ export const Content = styled.div`
     rgba(253, 99, 0, 0.1) 70%
   );
 `;
+
+export const TitleContainer = styled.div`
+  padding: 40px;
+  width: 100%;
+  height: 200px;
+`
+
+export const CardContent = styled.div`
+
+`
+
+export const Title = styled.h2`
+  color: "#000D1A";
+  font-size: 3rem;
+`

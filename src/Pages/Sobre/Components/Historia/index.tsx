@@ -14,6 +14,7 @@ const Historia: React.FC = () => {
     const prevRef = useRef<HTMLButtonElement>(null);
     const nextRef = useRef<HTMLButtonElement>(null);
 
+    
 
     return (
         <Container>
@@ -25,11 +26,14 @@ const Historia: React.FC = () => {
                 </Botao>
                 <Swiper
                     modules={[Navigation]}
-                    navigation={{
-                        prevEl: prevRef.current,
-                        nextEl: nextRef.current,
-                    }}
-                    
+                    onInit={(swiper) => {
+                      if (prevRef.current && nextRef.current) {
+                        swiper.params.navigation.prevEl = prevRef.current;
+                        swiper.params.navigation.nextEl = nextRef.current;
+                        swiper.navigation.init();
+                        swiper.navigation.update();
+                      }
+                    }}                    
                 >
                     <SwiperSlide>
                         <CardContainer>
@@ -44,6 +48,8 @@ const Historia: React.FC = () => {
                             <Image src={Membros} alt="Membros Serra Jr."></Image>
                         </CardContainer>
                     </SwiperSlide>
+
+                    
                     
                 </Swiper>
                 <Botao ref={nextRef}>

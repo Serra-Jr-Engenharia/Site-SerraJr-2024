@@ -8,6 +8,10 @@ export const SloganTextContainer = styled.div`
         font-size: 40px;
         color: #fff;
         font-weight: 700;
+
+        @media (max-width: 1100px) {
+            font-size: 32px;
+        }
     }
 
     .writer-cursor{

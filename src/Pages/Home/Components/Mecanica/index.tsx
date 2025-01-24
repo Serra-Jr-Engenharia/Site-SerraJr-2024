@@ -30,8 +30,6 @@ const Mecanica: React.FC = () => {
                         <Icon src={ImageAutomacao}/>
                         <CardText>Projetos de Automação</CardText>
                     </Card>
-                </CardContainer>
-                <CardContainer>
                     <Card>
                         <Icon src={ImageDesenho}/>
                         <CardText>Desenho Técnico e Industrial</CardText>

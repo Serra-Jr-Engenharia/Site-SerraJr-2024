@@ -9,10 +9,20 @@ export const Container = styled.div `
 `;
 
 export const LeftContent = styled.div `
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 10px;
+
+    @media (max-width: 1100px) {
+        width: 80%;
+    }
 `;
 
 export const RightContent = styled.div `
+    @media (max-width: 1100px) {
+        display: none;
+    }
 `;
 
 export const Title = styled.p `
@@ -21,13 +31,15 @@ export const Title = styled.p `
     font-weight: 800;
     margin: 20px 0;
 
-
+    @media (max-width: 1100px) {
+        text-align: center;
+    }
 
 `;
 
 export const Text = styled.p `
     color: #505050;
-    
+    text-align: justify;
     
     
 
@@ -40,24 +52,22 @@ export const Card = styled.div `
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
-    width: 350px;
+    width: 320px;
     height: 60px;
     margin: 20px 0px;
     color: #000D19;
     padding: 0 15px;
-   
-    
-    
-    
-
-
 `;
 
 export const CardContainer = styled.div `
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     gap: 20px;
+
+    @media (max-width: 1100px) {
+        justify-content: center;
+    }
 
 
 
@@ -66,6 +76,7 @@ export const CardContainer = styled.div `
 export const Button = styled.button `
     color: white;
     background-color: #000D19;
+    border: none;
     border-radius: 10px;
     width: 350px;
     height: 50px;
@@ -74,22 +85,23 @@ export const Button = styled.button `
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
-    &: hover{
+    &:hover{
         background-color: #04ADD7;
         transform: scale(1.05);
-        box-shadow: 0px 5px 15px rbga( 0, 0, 0, 0.3);
     }
 
     &:active{
         transform: scale(0.98);
-        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 1100px) {
+        align-self: center;
     }
 
 `;
 
 export const Image = styled.img `
     margin-top: -100px;
-    margin-left: 125px;
     width: 450px;
 
 `;

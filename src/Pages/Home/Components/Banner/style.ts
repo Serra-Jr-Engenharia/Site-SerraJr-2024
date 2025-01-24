@@ -12,6 +12,10 @@ export const Presentation = styled.div`
   flex-wrap: wrap;
   width: 100%;
   height: 80vh;
+
+  @media (max-width: 1100px) {
+    height: 60vh;
+  }
 `;
 
 export const Slogan = styled.div`

@@ -43,6 +43,9 @@ const DesktopNavBar: React.FC = () =>{
                             <LinkStyle>
                                 <Link to='/mecanica'>Mecânica</Link>
                             </LinkStyle>
+                            <LinkStyle>
+                                <Link to='/'>Serra Lab</Link>
+                            </LinkStyle>
                         </SubMenuContainerSon>
                     </SubMenuContainer>
                 </HeaderLi>

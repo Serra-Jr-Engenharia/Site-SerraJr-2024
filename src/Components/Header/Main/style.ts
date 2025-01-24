@@ -6,7 +6,7 @@ export const HeaderImg = styled.img`
     height: 11rem;
     margin-left: 25%;
 
-    @media screen and (max-width: ${width.mobile}){
+    /* @media screen and (max-width: ${width.mobile}){
         width: 6rem;
         height: 5rem;
     }
@@ -21,7 +21,7 @@ export const HeaderImg = styled.img`
         width: 30rem;
         height: 29rem;
         margin-left: 60%;
-    }
+    } */
     
 `;
 
