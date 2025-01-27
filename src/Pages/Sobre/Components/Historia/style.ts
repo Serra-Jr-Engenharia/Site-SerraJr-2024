@@ -13,21 +13,13 @@ export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 700px;
-    height: 300px;
+    width: 1000px;
+    height: 400px;
     margin: 20px;
     gap: 20px;
-    padding: 50px 100px 50px 100px;
     border-radius: 12px;
     margin-bottom: 20px;
     background-color: #000D1A;
-`
-
-export const TextContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
 `
 
 export const CarouselContainer = styled.div`
@@ -43,15 +35,14 @@ export const Title = styled.h1`
 
 export const TextAbout = styled.p`
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     text-align: justify;
     width: 400px;
     color: white;
 `
 export const Image = styled.img`
     border-radius: 12px;
-    width: 90%;
-    height: 100%;
+    height: 80%;
 `
 
 export const Retangulo = styled.hr`

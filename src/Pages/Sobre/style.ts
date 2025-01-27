@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import background from '../../Assets/bannerOnda2.png'
 
+
 export const Banner = styled.div`
   background-image: url(${background});
   background-size: cover;

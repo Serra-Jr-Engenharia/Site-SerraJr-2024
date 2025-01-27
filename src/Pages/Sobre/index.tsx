@@ -16,6 +16,7 @@ import Slider from './Components/Slider'
 
 const Sobre: React.FC = () =>{
     return(
+        <>
         <Content>
             <Banner>
                 <BannerImg src={Img}/>
@@ -61,7 +62,7 @@ const Sobre: React.FC = () =>{
             <Historia />
             <Slider/>
         </Content>
-        
+        </>      
     )
 }
 

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Slider from './Components/Slider/index'
 import Banner from './Components/Banner/index'
 import {Title, TitleContainer, CardContent} from './style'
@@ -7,13 +8,13 @@ const Computacao: React.FC = () =>{
 
     const [expandedCard, setExpandedCard] = useState(null);
 
-    const handleCardClick = (index) => {
-        setExpandedCard( index === expandedCard ? null : index);
-    }
+    // const handleCardClick = (index) => {
+    //     setExpandedCard( index === expandedCard ? null : index);
+    // }
 
-    const cardsData = [
-        { title: "Cervejelas", description: "Cervejelas 2023"}
-    ];
+    // const cardsData = [
+    //     { title: "Cervejelas", description: "Cervejelas 2023"}
+    // ];
 
     return(
         <>
@@ -29,11 +30,11 @@ const Computacao: React.FC = () =>{
 
             </div>
             <CardContent>
-                    {cardsData.map((card,index => (
+                    {/* {cardsData.map((card,index => (
                         <CardP key={index} title={card.title} img={card.img} description={card.description} isExpanded={expandedCard === index} onClick={() => handleCardClick(index)}/>
                     )))}
-                    
-                </CardContent>
+                     */}
+            </CardContent>
             <Slider/>
             
         </>
