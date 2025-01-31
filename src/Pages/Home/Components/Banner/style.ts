@@ -14,7 +14,7 @@ export const Presentation = styled.div`
   height: 80vh;
 
   @media (max-width: 1100px) {
-    height: 60vh;
+    height: 40vh;
   }
 `;
 
@@ -26,5 +26,11 @@ export const Slogan = styled.div`
   text-align: left;
   margin-right: 20%;
   margin-top: 9%;
+
+  @media (max-width: 1100px) {
+    width: 80%;
+    padding-left: 20px;
+  }
+
 `;
 

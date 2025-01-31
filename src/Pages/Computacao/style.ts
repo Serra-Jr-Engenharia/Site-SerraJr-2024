@@ -23,7 +23,10 @@ export const TitleContainer = styled.div`
 `
 
 export const CardContent = styled.div`
-
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 `
 
 export const Title = styled.h2`

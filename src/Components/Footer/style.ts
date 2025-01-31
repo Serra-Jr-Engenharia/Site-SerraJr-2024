@@ -9,6 +9,12 @@ export const FooterContainer = styled.div`
   p {
     color: white;
   }
+
+  @media (max-width: 1100px) {
+    padding: 10px 0;
+  }
+
+  
 `;
 
 export const FooterStyle = styled.div`
@@ -41,9 +47,9 @@ export const InfosSection = styled.div`
   height: 100%;
 
   @media (max-width: 1100px) {
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
     margin: 30px 0;
-    gap: 20px;
   }
 `;
 
@@ -53,7 +59,8 @@ export const InfoSection = styled.div`
   text-align: center;
   align-items: center;
   flex-direction: column;
-  width: 12rem;
+  width: fit-content;
+  margin: 15px;
 
   p {
     margin: 0;
@@ -62,6 +69,7 @@ export const InfoSection = styled.div`
   h4 {
     margin: 10px;
   }
+
 `;
 
 export const LinhaHorizontal = styled.hr`

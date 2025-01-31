@@ -57,6 +57,10 @@ export const Card = styled.div `
     margin: 20px 0px;
     color: #000D19;
     padding: 0 15px;
+
+    @media (max-width: 1100px) {
+        margin: 0;
+    }
 `;
 
 export const CardContainer = styled.div `

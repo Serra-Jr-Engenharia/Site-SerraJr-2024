@@ -6,16 +6,23 @@ import {
     Title,
     Button,
     Description
-
 } from "./style";
 
-const CardP: React.FC = ({title, img, description, isExpanded, onCLick}) => {
+interface CardProps {
+    title: string;
+    img?: string;
+    description?: string;
+    isExpanded: boolean;
+    onClick: () => void;
+}
+
+const CardP: React.FC<CardProps> = ({title, img, description, isExpanded, onClick}) => {
     return(
         <Container isExpanded={isExpanded} onClick={onClick}>
-            {img && <Image src={img} alt={title}/>}
-            <Title>{title}</Title>
-            {description && <Description>{description}</Description>}
-            {isExpanded && <Button>Saiba Mais</Button>}
+            {img && <Image src={img} alt={title} isExpanded={isExpanded}/>}
+            <Title isExpanded={isExpanded}>{title}</Title>
+            {isExpanded &&<Description isExpanded={isExpanded}>{description}</Description>}
+            {isExpanded && <Button isExpanded={isExpanded}>Saiba Mais</Button>}
 
         </Container>
     );

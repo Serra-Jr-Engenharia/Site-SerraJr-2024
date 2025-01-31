@@ -108,3 +108,4 @@ export const ImageRight = styled.img`
   top: 1100px;
   margin-right: 1500px;
 `;
+
