@@ -32,7 +32,24 @@ export const Image = styled.img<ContainerProps> `
     margin-top: ${(props) => (props.isExpanded ? "15%" : "0")}
 ` 
 
-// ${(props) => (props.isExpanded ? "" : "")}
+export const SaibaMais = styled.img `
+    width: 20%;
+` 
+
+export const TopRightImage = styled.img`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px; 
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1); 
+  }
+`;
+
 
 export const Title = styled.p<ContainerProps> `
     writing-mode: ${(props) => (props.isExpanded ? "horizontal-tb" : "vertical-rl")};
@@ -65,6 +82,10 @@ export const Button = styled.button <ContainerProps>`
     width: 70%;
     cursor: pointer;
     font-weight: bold;
-    display: ${(props) => (props.isExpanded ? "block" : "none")};
+    display: ${(props) => (props.isExpanded ? "flex" : "none")};
+    justify-content: space-between; 
+    align-items: center; 
     margin-bottom: ${(props) => (props.isExpanded ? "15%" : "0")};
+    text-align: center;
+    font-size: 0.8rem; 
 ` 

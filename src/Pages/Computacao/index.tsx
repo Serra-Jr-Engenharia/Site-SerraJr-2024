@@ -22,12 +22,12 @@ const Computacao: React.FC = () => {
     };
 
     const cardsData = [
-        { title: "Cervejelas", img: cervejelas, description: "Cervejelas 2023" },
-        { title: "ODS Quiz", img: ods, description: "Hackathon Hack2030" },
-        { title: "Projeto Friburguense", img: friburguense, description: "Friburguense Atlético Clube" },
-        { title: "Projeto TMF", img: tmf, description: "Cervejelas 2023" },
-        { title: "ETArserra 2022", img: etar, description: "Cervejelas 2023" },
-        { title: "Prownovar", img: prownovar, description: "Cervejelas 2023" },
+        { title: "Cervejelas", img: cervejelas, description: "Cervejelas 2023", link:"" },
+        { title: "ODS Quiz", img: ods, description: "Hackathon Hack2030", link:"" },
+        { title: "Projeto Friburguense", img: friburguense, description: "Friburguense Atlético Clube", link:"" },
+        { title: "Projeto TMF", img: tmf, description: "Cervejelas 2023", link:"" },
+        { title: "ETArserra 2022", img: etar, description: "Cervejelas 2023", link:"" },
+        { title: "Prownovar", img: prownovar, description: "Cervejelas 2023", link:"https://serrajrengenharia.github.io/prownovar-project/" },
     ];
 
     const cardsData2 = [
@@ -63,7 +63,7 @@ const Computacao: React.FC = () => {
 
         <CardContent>
             {cardsData.map((card, index) => (
-            <CardP key={index} title={card.title} img={card.img} description={card.description} isExpanded={expandedCard === index} onClick={() => handleCardClick(index)} />
+            <CardP key={index} title={card.title} img={card.img} description={card.description} link={card.link} isExpanded={expandedCard === index} onClick={() => handleCardClick(index)} />
             ))}
         </CardContent>
 
