@@ -8,6 +8,8 @@ import Header from './Components/Header/Main/index';
 import Footer from './Components/Footer/index';
 import Computacao from './Pages/Computacao/index';
 import Mecanica from './Pages/Mecanica/index';
+import SerraLab from './Pages/SerraLab/index'
+import ErrorPage from './Pages/ErrorPage/index'
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
             <Route path="/contatos" element={<Contato />} />
             <Route path="/computacao" element={<Computacao />} />
             <Route path="/mecanica" element={<Mecanica />} />
+            <Route path="/serraLab" element={<SerraLab />} />
+            <Route path="*" element={<ErrorPage />} />
         </Routes>
         <Footer />
       </Router> 

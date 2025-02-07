@@ -1,17 +1,17 @@
-# Site Serra Jr. Engenharia
+# Site Serra Jr. Engenharia 2024
 
-Projeto para o site da próprio da Serra Jr. Engenharia
+Projeto para a renovação do site da Serra Jr. Engenharia
 
 ## Tecnologias utilizadas
+- React
 - Typescript
 - Styled Components
-- React
 
 ## Membros Participantes
-- Caio Bindella
+- João Victor de Oliveira
 - Carolina Dornellas
-- Felipe Anderson
-- Victor Luis
-- João Matheus
-- Thiago Paixão
-- Manoel Rodrigues
+- Matheus Lopes
+- Bryan Angel
+- Wanessa de Souza
+- Victor Hugo
+- Luis Eduardo

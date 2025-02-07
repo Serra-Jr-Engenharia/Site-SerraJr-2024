@@ -9,11 +9,13 @@ interface CardProps {
   img?: string;
   description?: string;
   link: string; 
+  info?: string;
+  members: string[];
   isExpanded: boolean;
   onClick: () => void;
 }
 
-const CardP: React.FC<CardProps> = ({ title, img, description, link, isExpanded, onClick }) => {
+const CardP: React.FC<CardProps> = ({ title, img, description, link, info, members, isExpanded, onClick }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const handlePopupOpen = () => {
@@ -47,9 +49,12 @@ const CardP: React.FC<CardProps> = ({ title, img, description, link, isExpanded,
       {showPopup && (
         <Popup
           onClose={handlePopupClose}
-          content={`Detalhes sobre: ${title}`}
+          title={title}
+          img={img}
+          info={info}
+          members={members}
         />
-      )}
+      )}        
     </Container>
   );
 };

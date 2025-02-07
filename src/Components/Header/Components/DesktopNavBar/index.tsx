@@ -39,12 +39,11 @@ const DesktopNavBar: React.FC = () =>{
                             <LinkStyle>
                                 <Link to='/computacao'>Computação</Link>
                             </LinkStyle>
-                            {/* <SubMenuLine color="white"/> */}
                             <LinkStyle>
                                 <Link to='/mecanica'>Mecânica</Link>
                             </LinkStyle>
                             <LinkStyle>
-                                <Link to='/'>Serra Lab</Link>
+                                <Link to='/serraLab'>Serra Lab</Link>
                             </LinkStyle>
                         </SubMenuContainerSon>
                     </SubMenuContainer>
