@@ -15,3 +15,4 @@ Projeto para a renovação do site da Serra Jr. Engenharia
 - Wanessa de Souza
 - Victor Hugo
 - Luis Eduardo
+- Lorena
