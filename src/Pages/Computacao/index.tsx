@@ -3,12 +3,6 @@ import Slider from './Components/Slider/index';
 import Banner from './Components/Banner/index';
 import { Title, TitleContainer, CardContent, CardSpecialContainer, CardSpecial} from './style';
 import CardP from "../../Components/CardP";
-import cervejelas from "../../Assets/Cervejelas.png";
-import tmf from "../../Assets/TMF.png";
-import ods from "../../Assets/odsquiz 1.png";
-import prownovar from "../../Assets/prownovar.png";
-import etar from "../../Assets/etarserra 2023.png";
-import friburguense from "../../Assets/Friburguense.svg";
 import setinhal from "../../Assets/setinhal.png";
 import setinhar from "../../Assets/setinhar.png";
 import http from "../../Assets/http.png";
@@ -19,6 +13,9 @@ import notebook from "../../Assets/notebook.png";
 // import TsIcon from "../../../../Assets/ts.svg"
 // import ReactIcon from "../../../../Assets/react.svg"
 
+import { projectsData, Project } from "./projectsData";
+
+
 const Computacao: React.FC = () => {
     const [expandedCard, setExpandedCard] = useState(null);
 
@@ -26,14 +23,6 @@ const Computacao: React.FC = () => {
         setExpandedCard(index === expandedCard ? null : index);
     };
 
-    const cardsData = [
-        { title: "Cervejelas", img: cervejelas, description: "Cervejelas 2023", link:"", info:"", members: ["", ""] },
-        { title: "ODS Quiz", img: ods, description: "Hackathon Hack2030", link:"", info:"", members: [""] },
-        { title: "Projeto Friburguense", img: friburguense, description: "Friburguense Atlético Clube", link:"", info:"", members: [""] },
-        { title: "Projeto TMF", img: tmf, description: "Cervejelas 2023", link:"", info:"", members: [""] },
-        { title: "ETArserra 2022", img: etar, description: "Cervejelas 2023", link:"", info:"", members: [""] },
-        { title: "Prownovar", img: prownovar, description: "Cervejelas 2023", link:"https://serrajrengenharia.github.io/prownovar-project/", info:"", members: [""] },
-    ];
 
     const cardsData2 = [
         { title: "Desenvolvimento de Websites", img: http, description: "Desenvolvemos do zero um site pensado exclusivamente para atender as necessidades do seu negócio. Utilizamos das ferramentas mais modernas do mercado para criar uma solução única que irá alavancar a visibilidade do seu produto!" },
@@ -76,9 +65,19 @@ const Computacao: React.FC = () => {
         
 
         <CardContent>
-        {cardsData.map((card, index) => (
-            <CardP key={index} title={card.title} img={card.img} description={card.description} link={card.link} info={card.info} members={card.members} isExpanded={expandedCard === index} onClick={() => handleCardClick(index)} />
-            ))}
+        {projectsData.map((project: Project, index: number) => (
+            <CardP 
+                key={index} 
+                title={project.title} 
+                img={project.img} 
+                description={project.description} 
+                link={project.link} 
+                info={project.info}
+                members={project.members}
+                isExpanded={expandedCard === index} 
+                onClick={() => handleCardClick(index)} 
+            />
+        ))}
         </CardContent>
 
         <Slider />

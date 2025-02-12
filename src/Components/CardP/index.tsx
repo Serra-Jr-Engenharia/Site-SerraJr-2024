@@ -4,15 +4,20 @@ import Popup from "../PopUp";
 import setahorizontal from "../../Assets/SetaDiagonal.svg"
 import setasb from "../../Assets/SetaSaibaMais.png"
 
+interface MemberInfo {
+  name: string;
+  link: string;
+}
+
 interface CardProps {
   title: string;
   img?: string;
   description?: string;
   link: string; 
   info?: string;
-  members: string[];
   isExpanded: boolean;
   onClick: () => void;
+  members: MemberInfo[];  
 }
 
 const CardP: React.FC<CardProps> = ({ title, img, description, link, info, members, isExpanded, onClick }) => {
@@ -53,6 +58,7 @@ const CardP: React.FC<CardProps> = ({ title, img, description, link, info, membe
           img={img}
           info={info}
           members={members}
+          link={link}
         />
       )}        
     </Container>
