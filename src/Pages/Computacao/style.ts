@@ -126,3 +126,6 @@ export const CardSpecial = styled.div`
     height: 42px;
   }
 `;
+
+
+
