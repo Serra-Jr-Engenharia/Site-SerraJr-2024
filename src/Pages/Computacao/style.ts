@@ -26,26 +26,6 @@ export const CardContent = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
-    > div { 
-    transition: transform 0.3s ease-in-out;
-  }
-
-  > div:hover {
-    transform: scale(1.1);
-  }
-
-  > div:nth-child(1):hover {
-    transform: scale(1.1);
-  }
-
-  > div:nth-child(2):hover {
-    transform: scale(1.1);
-  }
-
-  > div:nth-child(3):hover {
-    transform: scale(1.1);
-  }
 `;
 
 export const Title = styled.h2`

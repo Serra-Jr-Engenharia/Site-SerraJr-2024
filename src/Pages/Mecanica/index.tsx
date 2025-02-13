@@ -1,5 +1,5 @@
 import Banner from './Components/Banner/index';
-import Slider from './Components/Slider/index';
+import Slider from '../../Components/Slider';
 
 const Mecanica: React.FC = () =>{
     return(

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Slider from './Components/Slider/index';
+import Slider from '../../Components/Slider';
 import Banner from './Components/Banner/index';
 import { Title, TitleContainer, CardContent, CardSpecialContainer, CardSpecial} from './style';
 import CardP from "../../Components/CardP";

@@ -1,11 +1,11 @@
 import { FunctionComponent } from "react";
 import { SliderContainer } from "./style";
 
-import InovaFri from "../../../../Assets/Sliders/inovafri.svg";
-import Iprj from "../../../../Assets/Sliders/iprj.svg";
-import Ligajr from "../../../../Assets/Sliders/ligajr.svg";
-import Voitto from "../../../../Assets/Sliders/voitto.svg";
-import WiseUp from "../../../../Assets/Sliders/wiseup.svg";
+import InovaFri from "../../Assets/Sliders/inovafri.svg";
+import Iprj from "../../Assets/Sliders/iprj.svg";
+import Ligajr from "../../Assets/Sliders/ligajr.svg";
+import Voitto from "../../Assets/Sliders/voitto.svg";
+import WiseUp from "../../Assets/Sliders/wiseup.svg";
 
 import Marquee from "react-marquee-slider";
 

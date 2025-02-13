@@ -17,7 +17,7 @@ import { Content,
     InformationText,
     Container
  } from './style'
-import Slider from './Components/Slider'
+import Slider from '../../Components/Slider';
 import Mapa from './Components/Map/index'
 
 const Contato: React.FC = () =>{

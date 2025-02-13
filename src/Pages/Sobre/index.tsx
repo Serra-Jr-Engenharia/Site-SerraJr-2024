@@ -22,7 +22,7 @@ import {
 } from "./style";
 // import { ImageLeft, ImageRight } from './style';
 
-import Slider from "./Components/Slider";
+import Slider from '../../Components/Slider';
 
 const DATA = [
   {

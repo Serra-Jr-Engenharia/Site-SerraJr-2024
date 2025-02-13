@@ -6,7 +6,7 @@ import Banner from "./Components/Banner"
 import GearsBackground from './Components/GearsBackground' 
 
 import { Content } from './style'
-import Slider from './Components/Slider'
+import Slider from '../../Components/Slider';
 
 const Home: React.FC = () =>{
     return(
