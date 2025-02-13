@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from '../../../../Assets/mecanicaPicture.svg'
+import Img from '../../../../Assets/Mecanica/mecanicaImage.svg'
 
 
 import { 

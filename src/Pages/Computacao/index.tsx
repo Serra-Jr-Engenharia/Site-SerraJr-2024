@@ -3,10 +3,10 @@ import Slider from './Components/Slider/index';
 import Banner from './Components/Banner/index';
 import { Title, TitleContainer, CardContent, CardSpecialContainer, CardSpecial} from './style';
 import CardP from "../../Components/CardP";
-import setinhal from "../../Assets/setinhal.png";
-import setinhar from "../../Assets/setinhar.png";
-import http from "../../Assets/http.png";
-import notebook from "../../Assets/notebook.png";
+import setinhal from "../../Assets/Computacao/setinhal.png";
+import setinhar from "../../Assets/Computacao/setinhar.png";
+import http from "../../Assets/Computacao/http.png";
+import notebook from "../../Assets/Computacao/notebook.png";
 // import HtmlIcon from "../../../../Assets/html.svg"
 // import CssIcon from "../../../../Assets/css.svg"
 // import JsIcon from "../../../../Assets/js.svg"

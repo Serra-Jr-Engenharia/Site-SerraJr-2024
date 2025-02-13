@@ -1,5 +1,5 @@
 import React from "react"
-import Membros from '../../../../Assets/Home/membros-2.webp'
+import Membros from '../../../../Assets/SobreNos/membros-2.webp'
 
 import {Container, TextContainer, TextAbout, Image, Title, Retangulo, TitleContainer} from './style'
 

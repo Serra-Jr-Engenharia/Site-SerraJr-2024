@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Container, Image, Title, Button, Description, TopRightImage, SaibaMais } from "./style";
 import Popup from "../PopUp"; 
-import setahorizontal from "../../Assets/SetaDiagonal.svg"
-import setasb from "../../Assets/SetaSaibaMais.png"
+import setahorizontal from "../../Assets/Computacao/SetaDiagonal.svg"
+import setasb from "../../Assets/Computacao/SetaSaibaMais.png"
 
 interface MemberInfo {
   name: string;

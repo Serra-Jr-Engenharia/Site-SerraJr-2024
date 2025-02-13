@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from '../../../../Assets/bannerOnda.png'
+import background from '../../../../Assets/Global/bannerOnda.png'
 
 export const Presentation = styled.div`
   background-image: url(${background});

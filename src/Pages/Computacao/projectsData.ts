@@ -1,10 +1,10 @@
-import cervejelas from "../../Assets/Cervejelas.png";
-import tmf from "../../Assets/TMF.png";
-import ods from "../../Assets/odsquiz 1.png";
-import prownovar from "../../Assets/prownovar.png";
-import etar from "../../Assets/etarserra 2023.png";
-import friburguense from "../../Assets/Friburguense.svg";
-import ppgctm from "../../Assets/Logo-PPG-CTM.png"
+import cervejelas from "../../Assets/Computacao/Cervejelas.png";
+import tmf from "../../Assets/Computacao/TMF.png";
+import ods from "../../Assets/Computacao/odsquiz 1.png";
+import prownovar from "../../Assets/Computacao/prownovar.png";
+import etar from "../../Assets/Computacao/etarserra 2023.png";
+import friburguense from "../../Assets/Computacao/Friburguense.svg";
+import ppgctm from "../../Assets/Computacao/Logo-PPG-CTM.png"
 import serra from "../../Assets/serra.png"
 
 interface Member {
@@ -12,14 +12,14 @@ interface Member {
     link: string;
   }
   
-  interface Project {
+export interface Project {
     title: string;
     img: string;
     description: string;
     link: string;
     info: string;
     members: Member[]; 
-  }
+}
   
 
 export const projectsData: Project[] = [

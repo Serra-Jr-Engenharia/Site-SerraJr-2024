@@ -1,11 +1,11 @@
 import React from "react";
 
 import Historia from './Components/Historia/index'
-import Img from "../../Assets/AboutUs/SobreNos.png";
+import Img from "../../Assets/SobreNos//SobreNos.png";
 
-import valoresIcon from "../../Assets/valores.png";
-import visaoIcon from "../../Assets/visao.png";
-import missaoIcon from "../../Assets/missao.png";
+import valoresIcon from "../../Assets/SobreNos/valores.png";
+import visaoIcon from "../../Assets/SobreNos/visao.png";
+import missaoIcon from "../../Assets/SobreNos/missao.png";
 // import sobreFormaDireita from '../../Assets/SobreFormaDireita.png'
 // import sobreFormaEsquerda from '../../Assets/SobreFormaEsquerda.png'
 
