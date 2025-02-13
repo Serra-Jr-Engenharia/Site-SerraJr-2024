@@ -5,12 +5,12 @@ import Membros2 from '../../../../Assets/SobreNos//membros-2.webp'
 // import SetaEsquerda from '../../../../Assets/AboutUs/setaEsquerda.png';
 // import SetaDireita from '../../../../Assets/AboutUs/setaDireita.png';
 
-import {Container, TextAbout, Image, Retangulo, CardContainer, Title} from './style'
+import {Container, TextAbout, Image, Retangulo, CardContainer, Title, StyledSwiperSlide} from './style'
 
 
 import { Navigation, Pagination } from 'swiper/modules';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -53,12 +53,12 @@ const Historia: React.FC = () => {
                     pagination={{ clickable: true }}
                 >
                     {content.map((item) => (
-                        <SwiperSlide key={item.id} style={{display: 'flex', gap: '20px'}}>
+                        <StyledSwiperSlide key={item.id}>
                             <TextAbout>
                                 {item.texto}
                             </TextAbout>
                             <Image src={item.image} alt="Membros Serra Jr."></Image>
-                        </SwiperSlide>
+                        </StyledSwiperSlide>
                     ))}
                 </Swiper>
             </CardContainer>
@@ -66,5 +66,6 @@ const Historia: React.FC = () => {
 
     )
 }
+
 
 export default Historia
