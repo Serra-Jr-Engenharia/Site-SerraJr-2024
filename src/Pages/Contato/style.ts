@@ -58,7 +58,8 @@ export const Button = styled.button`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #333;
+  background: linear-gradient(to right bottom,rgb(7, 38, 70), #04ADD7);  // Gradiente invertido
+  transform: scale(1.01); 
   }
 `;
 

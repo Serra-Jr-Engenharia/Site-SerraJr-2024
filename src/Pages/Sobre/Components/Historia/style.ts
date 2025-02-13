@@ -7,7 +7,42 @@ export const Container = styled.div`
     align-items: center;
     width: 1000px;
     margin: 100px 0;
-`
+
+  /* Estilizando setas */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+
+    &:hover {
+        color: #04add7;
+        transform: scale(1.2);
+    }
+}
+
+  /* Estilizando bolinhas da paginação */
+.swiper-pagination-bullet {
+    background-color: gray;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    opacity: 0.7;
+
+    &:hover {
+        background-color: #04add7;
+        transform: scale(1.2);
+    }
+
+    &.swiper-pagination-bullet-active {
+        background-color: white;
+        transform: scale(1.2);
+    }
+}
+`;
 
 export const CardContainer = styled.div`
     display: flex;
@@ -66,4 +101,3 @@ export const Botao = styled.button`
     }
 
 `
-

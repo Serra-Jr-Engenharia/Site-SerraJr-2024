@@ -94,9 +94,9 @@ export const Button = styled.button`
     transition: all 0.3s ease-in-out;
 
     &:hover {
-        background-color: #04ADD7;
-        transform: scale(1.05);
-    }
+    background: linear-gradient(to right bottom,rgb(7, 38, 70), #04ADD7);  // Gradiente invertido
+    transform: scale(1.01); 
+}
 
     &:active {
         transform: scale(0.98);
