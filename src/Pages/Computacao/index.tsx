@@ -90,6 +90,6 @@ const Computacao: React.FC = () => {
 //     <ContactText>Quer colocar seu projeto em prática?</ContactText>
 //     <Button href="">Entre em Contato</Button>
 // </ContactSection>
- };
+};
 
 export default Computacao;

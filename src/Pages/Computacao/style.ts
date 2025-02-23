@@ -12,6 +12,7 @@ export const Content = styled.div`
     rgba(4, 173, 215, 0.1) 42%,
     rgba(253, 99, 0, 0.1) 70%
   );
+  
 `;
 
 export const TitleContainer = styled.div`
@@ -26,6 +27,7 @@ export const CardContent = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  
 `;
 
 export const Title = styled.h2`

@@ -6,7 +6,7 @@ import email from "../../Assets/Contact/email.svg";
 import telefone from "../../Assets/Contact/telefone.svg";
 import localizacao from "../../Assets/Contact/localizacao.svg";
 
-import emailjs from "@emailjs/browser";
+//import emailjs from "@emailjs/browser";
 
 import {
   Content,
