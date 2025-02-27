@@ -23,6 +23,7 @@ const Computacao: React.FC = () => {
         setExpandedCard(index === expandedCard ? null : index);
     };
 
+    const selectedStyle = "optionA";
 
     const cardsData2 = [
         { title: "Desenvolvimento de Websites", img: http, description: "Desenvolvemos do zero um site pensado exclusivamente para atender as necessidades do seu negócio. Utilizamos das ferramentas mais modernas do mercado para criar uma solução única que irá alavancar a visibilidade do seu produto!" },
@@ -76,6 +77,7 @@ const Computacao: React.FC = () => {
                 members={project.members}
                 isExpanded={expandedCard === index} 
                 onClick={() => handleCardClick(index)} 
+                styleChoice={selectedStyle}
             />
         ))}
         </CardContent>

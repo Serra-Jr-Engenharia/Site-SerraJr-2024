@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 interface ContainerProps {
     isExpanded: boolean;
+    gradientColor?: string;
+    backgroundColor?: string;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -9,9 +11,9 @@ export const Container = styled.div<ContainerProps>`
   width: ${(props) => (props.isExpanded ? "230px" : "100px")};
   height: 350px;
   background: ${(props) =>
-  props.isExpanded
-    ? "#000D1A"
-    : "linear-gradient(to bottom, #04ADD7, #000D1A)"};
+    props.isExpanded
+      ? props.backgroundColor || "#000D1A"
+      : props.gradientColor || "linear-gradient(to bottom, #04ADD7, #000D1A)"};
   color: #fff;
   border-radius: ${(props) => (props.isExpanded ? "16px" : "12px")};
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
