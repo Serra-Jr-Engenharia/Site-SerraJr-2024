@@ -36,15 +36,6 @@ export const BannerImg = styled.img`
   }
 `;
 
-// export const Imagem = styled.img`
-//   display: block;
-//   flex-direction: column;
-//   justify-content: left;
-//   width: 40%;
-//   margin-right: 20%;
-//   margin-top: 9%;
-// `;
-
 export const Titulo = styled.p`
   margin-top: 10%;
   font-family: "Poppins";
@@ -125,18 +116,32 @@ export const IconContainer = styled.div`
   width: 100%;
 `;
 
+export const ImgContainer = styled.div`
+  width: 100%;
+  position: relative;
+
+  z-index: -1;
+`
+
 export const ImageLeft = styled.img`
   position: absolute;
-  width: 450px;
-  height: auto;
-  top: 600px;
-  margin-left: 1600px;
+  top: 200px;
+  left: 0;
+  height: 600px;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
+
 `;
 
 export const ImageRight = styled.img`
   position: absolute;
-  width: 450px;
-  height: auto;
-  top: 1100px;
-  margin-right: 1500px;
+  right: 0;
+  top: -300px;
+  height: 600px;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
 `;

@@ -6,8 +6,10 @@ import Img from "../../Assets/SobreNos//SobreNos.png";
 import valoresIcon from "../../Assets/SobreNos/valores.png";
 import visaoIcon from "../../Assets/SobreNos/visao.png";
 import missaoIcon from "../../Assets/SobreNos/missao.png";
-// import sobreFormaDireita from '../../Assets/SobreFormaDireita.png'
-// import sobreFormaEsquerda from '../../Assets/SobreFormaEsquerda.png'
+
+import sobreFormaDireita from '../../Assets/SobreNos/SobreFormaDireita.png'
+import sobreFormaEsquerda from '../../Assets/SobreNos/SobreFormaEsquerda.png'
+
 
 import {
   Content,
@@ -19,8 +21,10 @@ import {
   CardsContainer,
   BannerImg,
   IconContainer,
+  ImgContainer,
+  ImageRight,
+  ImageLeft
 } from "./style";
-// import { ImageLeft, ImageRight } from './style';
 
 import Slider from '../../Components/Slider';
 
@@ -60,8 +64,6 @@ const Sobre: React.FC = () => {
         <Banner>
           <BannerImg src={Img} />
           <Slogan>Sobre nós</Slogan>
-          {/* <ImageRight src={sobreFormaDireita} alt="Forma Direita" />
-                <ImageLeft src={sobreFormaEsquerda} alt="Forma Esquerda" /> */}
         </Banner>
 
         <CardsContainer>
@@ -74,7 +76,13 @@ const Sobre: React.FC = () => {
               <Text>{card.text}</Text>
             </Card>
           ))}
+
         </CardsContainer>
+
+        <ImgContainer>
+          <ImageRight src={sobreFormaDireita} alt="forma ilustracao"/>
+          <ImageLeft src={sobreFormaEsquerda} alt="forma ilustracao"/>
+        </ImgContainer>
 
         <Historia />
 
