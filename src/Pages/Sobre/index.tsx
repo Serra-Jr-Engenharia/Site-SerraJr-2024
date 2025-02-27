@@ -7,8 +7,8 @@ import valoresIcon from "../../Assets/SobreNos/valores.png";
 import visaoIcon from "../../Assets/SobreNos/visao.png";
 import missaoIcon from "../../Assets/SobreNos/missao.png";
 
-import sobreFormaDireita from '../../Assets/SobreNos/SobreFormaDireita.png'
-import sobreFormaEsquerda from '../../Assets/SobreNos/SobreFormaEsquerda.png'
+import sobreForma from '../../Assets/SobreNos/SobreForma.svg'
+
 
 
 import {
@@ -80,8 +80,8 @@ const Sobre: React.FC = () => {
         </CardsContainer>
 
         <ImgContainer>
-          <ImageRight src={sobreFormaDireita} alt="forma ilustracao"/>
-          <ImageLeft src={sobreFormaEsquerda} alt="forma ilustracao"/>
+          <ImageRight src={sobreForma} alt="forma ilustracao"/>
+          <ImageLeft src={sobreForma} alt="forma ilustracao"/>
         </ImgContainer>
 
         <Historia />

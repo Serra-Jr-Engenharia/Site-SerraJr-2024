@@ -125,9 +125,11 @@ export const ImgContainer = styled.div`
 
 export const ImageLeft = styled.img`
   position: absolute;
-  top: 200px;
+  top: 300px;
   left: 0;
-  height: 600px;
+  width: 150px;
+  height: 400px;
+  transform: rotateY(180deg);
 
   @media (max-width: 1100px) {
     display: none;
@@ -139,7 +141,8 @@ export const ImageRight = styled.img`
   position: absolute;
   right: 0;
   top: -300px;
-  height: 600px;
+  width: 150px;
+  height: 400px;
 
   @media (max-width: 1100px) {
     display: none;
