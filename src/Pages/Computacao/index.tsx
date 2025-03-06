@@ -13,6 +13,7 @@ import {
   ContactSection,
   ContactText,
   ContactButton,
+  StyledHr,
 } from "./style";
 import CardP from "../../Components/CardP";
 import setinhal from "../../Assets/Computacao/setinhal.png";
@@ -52,12 +53,11 @@ const Computacao: React.FC = () => {
   return (
     <>
       <Banner />
-      <div style={{ height: "30vh", width: "100%" }}>
-        <TitleContainer>
-          <Title>Carta de serviços</Title>
-          <hr />
-        </TitleContainer>
-      </div>
+
+      <TitleContainer>
+        <Title>Carta de serviços</Title>
+        <StyledHr />
+      </TitleContainer>
 
       {/* Card isolado centralizado na tela */}
       <CardSpecialContainer>

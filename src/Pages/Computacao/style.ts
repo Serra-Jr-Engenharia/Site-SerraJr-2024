@@ -16,7 +16,6 @@ export const Content = styled.div`
 
 export const TitleContainer = styled.div`
   padding: 40px;
-  width: 100%;
   height: 200px;
 `;
 
@@ -29,9 +28,21 @@ export const CardContent = styled.div`
   margin-bottom: 6rem;
 `;
 
+export const StyledHr = styled.hr`
+  border: none;
+  height: 4px;
+  background-color: rgba(0, 13, 26, 0.15);
+  width: 100%;
+  opacity: 5;
+`;
+
 export const Title = styled.h2`
-  color: "#000D1A";
+  color: #000d1a;
   font-size: 3rem;
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
+    text-align: center;
+  }
 `;
 
 // Container de cardsData2(aulas)
@@ -43,6 +54,7 @@ export const CardSpecialContainer = styled.div`
   align-items: center;
   margin-bottom: 6rem;
   gap: 2rem;
+  flex-wrap: wrap;
 `;
 
 export const CardSpecial = styled.div`
@@ -81,6 +93,10 @@ export const CardSpecial = styled.div`
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   p.description-card {
@@ -117,6 +133,7 @@ export const TechContainer = styled.div`
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 6rem;
+  flex-wrap: wrap;
 `;
 
 export const TechIcon = styled.img`
@@ -136,6 +153,11 @@ export const ContactText = styled.p`
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `;
 export const ContactButton = styled.a`
   background: linear-gradient(90deg, #04add7 0%, #049fc7 29%, #000d1a 100%);
