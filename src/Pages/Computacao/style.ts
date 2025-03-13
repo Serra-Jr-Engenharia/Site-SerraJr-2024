@@ -69,6 +69,16 @@ export const CardSpecial = styled.div`
   cursor: pointer;
   position: relative;
 
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 350px;
+  }
+
+  @media (max-width: 500px) {
+    width: 330px;
+    height: 340px;
+  }
+
   &:hover {
     background: linear-gradient(
       to right bottom,
@@ -83,6 +93,11 @@ export const CardSpecial = styled.div`
     padding: 1rem;
     max-width: 17%;
     border-radius: 5px;
+
+    @media (max-width: 768px) {
+      max-width: 15%;
+      margin-top: 1rem;
+    }
   }
 
   p.title-card {
@@ -96,6 +111,13 @@ export const CardSpecial = styled.div`
 
     @media (max-width: 768px) {
       font-size: 1.5rem;
+      top: -8rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1.3rem;
+      top: -7rem;
+      margin-left: 6rem;
     }
   }
 
@@ -107,6 +129,17 @@ export const CardSpecial = styled.div`
     color: gray;
     font-size: 1rem;
     width: 335px;
+
+    @media (max-width: 768px) {
+      width: 250px;
+    }
+
+    @media (max-width: 500px) {
+      width: 200px;
+      font-size: 0.9rem;
+      top: -8rem;
+      left: 6rem;
+    }
   }
 
   &:hover p.title-card {
@@ -124,6 +157,13 @@ export const CardSpecial = styled.div`
     margin-top: 9rem;
     width: 42px;
     height: 42px;
+
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+      margin-left: 1rem;
+      margin-top: 7rem;
+    }
   }
 `;
 
