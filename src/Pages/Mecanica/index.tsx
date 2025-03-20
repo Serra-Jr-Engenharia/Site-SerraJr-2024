@@ -7,6 +7,7 @@ import {
   CardSpecial,
   ContactSection,
   ContactText,
+  StyledHr,
   ContactButton,
 } from "../Mecanica/style"; // Importando os estilos de Computação
 import image43 from "../../Assets/Mecanica/image 43.png";
@@ -49,9 +50,9 @@ const Mecanica: React.FC = () => {
       <Banner />
       <div style={{ height: "30vh", width: "100%" }}>
         <TitleContainer>
-          <Title>Carta de serviços</Title>
-          <hr />
-        </TitleContainer>
+        <Title>Carta de serviços</Title>
+        <StyledHr />
+      </TitleContainer>
       </div>
       <div style={{ height: "150vh" }}>
         <CardSpecialContainer>

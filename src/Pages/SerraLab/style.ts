@@ -8,6 +8,7 @@ export const CardSpecialContainer = styled.div`
   align-items: center;
   width: 80%;
   margin: 0 auto;
+
 `;
 
 export const CardSpecial = styled.div`
@@ -22,6 +23,7 @@ export const CardSpecial = styled.div`
   cursor: pointer;
   position: relative;
   margin-bottom: 5rem;
+
   
   &:hover {
     background: linear-gradient(

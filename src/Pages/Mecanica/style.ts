@@ -15,9 +15,16 @@ export const Content = styled.div`
 `;
 
 export const TitleContainer = styled.div`
-  padding: 40 0 0px;
-  width: 100%;
+  padding: 40px;
   height: 200px;
+`;
+
+export const StyledHr = styled.hr`
+  border: none;
+  height: 4px;
+  background-color: rgba(0, 13, 26, 0.15);
+  width: 100%;
+  opacity: 5;
 `;
 
 export const CardContent = styled.div`
@@ -34,9 +41,10 @@ export const Title = styled.h2`
 `;
 
 export const CardSpecialContainer = styled.div`
+  position: relative;
+  top: 60px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-  grid-gap: 20px; /* Espaçamento entre os cards */
+  grid-template-columns: repeat(2, 1fr); //
   justify-content: center;
   align-items: center;
   width: 80%;
