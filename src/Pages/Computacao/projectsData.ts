@@ -6,6 +6,7 @@ import etar from "../../Assets/Computacao/etarserra 2023.png";
 import friburguense from "../../Assets/Computacao/Friburguense.svg";
 import ppgctm from "../../Assets/Computacao/Logo-PPG-CTM.png"
 import serra from "../../Assets/serra.png"
+import pagil from "../../Assets/CompPage/pagil.svg"
 
 interface Member {
     name: string;
@@ -33,8 +34,8 @@ export const projectsData: Project[] = [
             { name: "André Barros", link: "https://linkedin.com" },
             { name: "Caio Bindella", link: "https://linkedin.com" },
             { name: "Victor Luis", link: "https://linkedin.com" },
-            { name: "Kauan Peçanha", link: "https://linkedin.com" },
-            { name: "Carolina Dornelas", link: "https://linkedin.com" },
+            { name: "Kauan Peçanha", link: "https://www.linkedin.com/in/kauan-pe%C3%A7anha-171539241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwOvKUB0kijdehLTeb6K8AV35Kj3tMyxd4&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BKiz1ZqlaTZGmreG79FX9rA%3D%3D" },
+            { name: "Carolina Dornelas", link: "https://www.linkedin.com/in/carolina-dornelas-35845b237/" },
             { name: "Davidson", link: "https://linkedin.com" },
             { name: "Gustavo Curty", link: "https://linkedin.com" },
             { name: "Vinicius Monnerat", link: "https://linkedin.com" },
@@ -47,9 +48,9 @@ export const projectsData: Project[] = [
         link:"https://www.ppgctm.iprj.uerj.br/", 
         info:"Projeto para desenvolvimento de um website com intuito de apresentar o programa de pós-graduação em Ciência e Tecnologia dos Materiais. O objetivo principal do projeto é desenvolver uma interface que exiba os conteúdos presentes no programa de Pós-Graduação em Ciência e Tecnologia dos Materiais, tal como notícias, objetivos, apresentação dos laboratórios com fotos e uma breve descrição, linhas de pesquisa, os docentes responsáveis e um meio de contato. Além disso, foi aplicada a tradução da página para Inglês e Espanhol.", 
         members: [
-            { name: "Carolina Dornelas", link: ""},
+            { name: "Carolina Dornelas", link: "https://www.linkedin.com/in/carolina-dornelas-35845b237/"},
             { name: "Felipe Carrancho", link: ""},
-            { name: "Gabrielle Ferreira", link: ""},
+            { name: "Gabrielle Ferreira", link: "https://www.linkedin.com/in/gabriellefoliv/?lipi=urn%3Ali%3Apage%3Ad_flagship3_company_posts%3BXX5Vx83FR8uzihhztZYg9A%3D%3D"},
             { name: "Guilherme Alves", link: ""},
             { name: "Gustavo Curty", link: ""},
             { name: "Gustavo Dias", link: ""},
@@ -64,7 +65,7 @@ export const projectsData: Project[] = [
         info:"O objetivo do projeto era reestruturar o site da Serra Jr. Engenharia, visto que o site antigo estava bem lento e com um design ultrapassado.", 
         members: [
             { name: "Caio Bindella", link: ""},
-            { name: "Carolina Dornelas", link: ""},
+            { name: "Carolina Dornelas", link: "https://www.linkedin.com/in/carolina-dornelas-35845b237/"},
             { name: "Felipe Anderson", link: ""},
             { name: "João Matheus", link: ""},
             { name: "Manoel Rodrigues", link: ""},
@@ -81,7 +82,7 @@ export const projectsData: Project[] = [
         members: [
             { name: "Victor Luis", link: ""},
             { name: "Caio Bindella", link: ""},
-            { name: "Kauan Peçanha", link: ""},
+            { name: "Kauan Peçanha", link: "https://www.linkedin.com/in/kauan-pe%C3%A7anha-171539241?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADwOvKUB0kijdehLTeb6K8AV35Kj3tMyxd4&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BKiz1ZqlaTZGmreG79FX9rA%3D%3D"},
             { name: "Manoel Rodrigues", link: ""},
           ],
     },
@@ -90,41 +91,63 @@ export const projectsData: Project[] = [
         img: friburguense, 
         description: "Friburguense Atlético Clube", 
         link:"", 
-        info:"", 
+        info:"O projeto consistiu no desenvolvimento de um Website voltado à aquisição de planos de sócio torcedor do Friburguense Atlético Clube. O site contém as funcionalidades de cadastro e login, com um sistema de pagamentos integrado. Além disso, possui uma aba dedicada aos patrocinadores do clube, com um slider para exibição de seus logotipos.", 
         members: [
-            { name: "", link: ""}
+            { name: "João Vitor Muniz", link: ""},
+            { name: "Leticia Bussinger", link: ""},
+            { name: "Ramon Ribeiro", link: ""},
           ],
     },
     { title: "Projeto TMF",
         img: tmf,
         description: "Cervejelas 2023",
-        link:"",
-        info:"",
+        link:"https://usinagemtmf.com.br/",
+        info:"O projeto consistiu no desenvolvimento de um website para a TMF Usinagem, para exibição de produtos e serviços oferecidos pela empresa. O site conta com o catálogo de produtos, além da possibilidade de agendamento de orçamento dos serviços oferecidos pela funcionalidade de envio de e-mails. Também há páginas de informações sobre a empresa e um mapa integrado exibindo a localização da mesma.",
         members: [
-            { name: "", link: ""}
+            
           ],
         },
 
     { 
         title: "ETArserra 2022",
         img: etar,
-        description: "Cervejelas 2023",
-        link:"",
-        info:"",
+        description: "ETArserra",
+        link:"https://etarserra.com/x/'",
+        info:"Site em WordPress feito para o evento acadêmico Etarserra 2022, que ocorreu de 18 a 21 de outubro em Nova Friburgo. Conta com informações sobre como se inscrever, horários de apresentação, história do evento, entre outras coisas. Foi dado um enfoque bem grande em acessibilidade neste projeto, que conta com várias ferramentas para pessoas com baixa visão, além da tradução em libras de todo o site usando a tecnologia VLibras.",
         members: [
-            { name: "", link: ""}
+            { name: "Kauan Peçanha", link: ""},
+            { name: "Moisés Alves", link: ""},
+            { name: "Victor Luis", link: ""},
           ],
         },
 
     { 
         title: "Prownovar",
         img: prownovar,
-        description: "Cervejelas 2023",
+        description: "Prownovar",
         link:"https://serrajrengenharia.github.io/prownovar-project/",
-        info:"",
+        info:"Site informativo desenvolvido para a empresa de engenharia naval, offshore e industrial Prownovar. O site detalha a história da empresa, como atuam, seus principais cases de sucesso e as linhas de atuação da companhia. Além disso, conta com um formulário de contato onde é possível enviar um email direto para a empresa.",
         members: [
-            { name: "", link: ""}
+            { name: "Guilherme Fialho", link: ""},
+            { name: "João Matheus", link: ""},
+            { name: "Maike Willian", link: ""},
+            { name: "Thiago Paixão", link: ""},
           ],
     },
+    { 
+      title: "Pagil Serrana",
+      img: pagil,
+      description: "Pagil Serrana",
+      link:"https://pagilserrana.com.br/'",
+      info:"Projeto de site informativo em WordPress para divulgar os serviços da empresa de aluguel e venda de peças para equipamentos pesados Pagil Serrana. Conta com informações sobre a história da empresa e detalha os equipamentos e peças que a empresa tem a disposição para venda ou aluguel.",
+      members: [
+          { name: "Diogo Cardinot", link: ""},
+          { name: "Julya Matias", link: ""},
+          { name: "Maike William", link: ""},
+          { name: "Moises Alves", link: ""},
+          { name: "Pedro Longue", link: ""},
+          { name: "Thiago Paixão", link: ""},
+        ],
+  },
 
 ];

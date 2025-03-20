@@ -27,12 +27,65 @@ export const StyledHr = styled.hr`
   opacity: 5;
 `;
 
+export const Card = styled.div`
+
+`;
+
+export const CarouselWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+`;
+
+export const CarouselButton = styled.button`
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+
+  &:hover {
+    color: #0056b3;
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+`;
+
+export const CardContainer = styled.div`
+  display: flex;
+  overflow: hidden;
+  width: 60%;
+  justify-content: center;
+`;
+export const Indicators = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  gap: 8px;
+`;
+
+export const Indicator = styled.span<{ active: boolean }>`
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: ${(props) => (props.active ? "#333" : "#bbb")};
+  transition: background-color 0.3s;
+`;
+
 export const CardContent = styled.div`
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  
 `;
 
 export const Title = styled.h2`

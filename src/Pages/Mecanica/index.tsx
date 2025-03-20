@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Banner from "./Components/Banner/index";
 import Slider from "../../Components/Slider";
 import {
@@ -9,6 +10,13 @@ import {
   ContactText,
   StyledHr,
   ContactButton,
+  Card,
+  CardContent,
+  CarouselButton,
+  CarouselWrapper,
+  CardContainer,
+  Indicators, 
+  Indicator
 } from "../Mecanica/style"; // Importando os estilos de Computação
 import image43 from "../../Assets/Mecanica/image 43.png";
 import image44 from "../../Assets/Mecanica/image 44.png";
@@ -16,6 +24,10 @@ import image45 from "../../Assets/Mecanica/image 45.png";
 import image46 from "../../Assets/Mecanica/image 46.png";
 import seta1 from "../../Assets/Mecanica/seta laranja 4.png";
 import seta2 from "../../Assets/Mecanica/seta laranja 4 - Copia.png";
+
+import CardP from "../../Components/CardP";
+import setaEsquerda from "../../Assets/esq.png"
+import setaDireita from "../../Assets/dir.png"
 
 const cardsData3 = [
   {
@@ -44,7 +56,30 @@ const cardsData3 = [
   },
 ];
 
+const ITEMS_PER_PAGE = 6;
+
+import { projectsData, Project } from "./projectsData";
+
 const Mecanica: React.FC = () => {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+    const [startIndex, setStartIndex] = useState(0);
+  
+    const handleCardClick = (index: number) => {
+      setExpandedCard(index === expandedCard ? null : index);
+    };
+  
+    const handleNext = () => {
+      setStartIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
+    };
+  
+    const handlePrev = () => {
+        setStartIndex((prevIndex) =>
+            prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
+        );
+    };
+  
+    const selectedStyle = "optionB";
+
   return (
     <>
       <Banner />
@@ -67,6 +102,42 @@ const Mecanica: React.FC = () => {
           ))}
         </CardSpecialContainer>
       </div>
+
+      <CarouselWrapper>
+                      <CarouselButton onClick={handlePrev}><img src={setaEsquerda} alt="Anterior" /></CarouselButton>
+                      
+                      <CardContainer>
+                          <Card>
+                              <CardContent>
+                                  {projectsData
+                                      .slice(startIndex, startIndex + ITEMS_PER_PAGE)
+                                      .concat(projectsData.slice(0, Math.max(0, ITEMS_PER_PAGE - (projectsData.length - startIndex))))
+                                      .map((project, index) => (
+                                          <CardP
+                                              key={startIndex + index}
+                                              title={project.title}
+                                              img={project.img}
+                                              description={project.description}
+                                              link={project.link}
+                                              info={project.info}
+                                              members={project.members}
+                                              isExpanded={expandedCard === startIndex + index}
+                                              onClick={() => handleCardClick(startIndex + index)}
+                                              styleChoice={selectedStyle}
+                                          />
+                                      ))}
+                              </CardContent>
+                          </Card>
+                      </CardContainer>
+      
+                      <CarouselButton onClick={handleNext}> <img src={setaDireita} alt="Próximo" /></CarouselButton>
+                  </CarouselWrapper>
+      
+                  <Indicators>
+                      {projectsData.map((_, index) => (
+                          <Indicator key={index} active={index === startIndex} />
+                      ))}
+                  </Indicators>
 
       <ContactSection>
         <ContactText>Quer colocar seu projeto em prática?</ContactText>
