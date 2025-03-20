@@ -15,7 +15,7 @@ export const Content = styled.div`
 `;
 
 export const TitleContainer = styled.div`
-  padding: 40px;
+  padding: 40 0 0px;
   width: 100%;
   height: 200px;
 `;
