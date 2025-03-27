@@ -78,3 +78,6 @@ export const Retangulo = styled.hr`
     background-color: #D9D9D9;
     border: none;
 `
+export const Button = styled.button `
+
+`;

@@ -1,9 +1,23 @@
 import React from "react"
 import Membros from '../../../../Assets/SobreNos/membros-2.webp'
+import { useNavigate } from "react-router-dom";
 
-import {Container, TextContainer, TextAbout, Image, Title, Retangulo, TitleContainer} from './style'
+import {
+    Container, 
+    TextContainer, 
+    TextAbout, 
+    Image, 
+    Title, 
+    Retangulo, 
+    TitleContainer, 
+    Button} from './style'
 
 const SobreNos: React.FC = () => {
+        const navigate = useNavigate();
+
+const handleButtonClick = () => {
+        navigate("/SobreNos"); 
+};
     return (
         <Container>
             <TextContainer>
@@ -18,7 +32,10 @@ const SobreNos: React.FC = () => {
                 PARA O MERCADO.
                 </TextAbout>
             </TextContainer>
-            <Image src={Membros} alt="Membros Serra Jr."></Image>
+
+            <Image src={Membros} alt="Membros Serra Jr."></Image>   
+                     
+            <Button onClick={handleButtonClick}>Saiba Mais</Button>
         </Container>
     )
 }
