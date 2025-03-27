@@ -16,4 +16,3 @@ Projeto para a renovação do site da Serra Jr. Engenharia
 - Victor Hugo
 - Luis Eduardo
 - Lorena
-- asdasd
