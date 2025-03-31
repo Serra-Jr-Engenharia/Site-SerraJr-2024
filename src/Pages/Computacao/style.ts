@@ -13,15 +13,32 @@ export const Content = styled.div`
     rgba(253, 99, 0, 0.1) 70%
   );
 `;
+export const Title = styled.h2`
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  color: #000d1a;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, #04add7 0%, #049fc7 29%, #000d1a 100%);
+  }
+`;
 
 export const TitleContainer = styled.div`
-  padding: 40px;
-  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
 
-export const Card = styled.div`
-
-`;
+export const Card = styled.div``;
 
 export const CarouselWrapper = styled.div`
   display: flex;
@@ -77,7 +94,6 @@ export const CardContent = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
 `;
 
 export const StyledHr = styled.hr`
@@ -86,15 +102,6 @@ export const StyledHr = styled.hr`
   background-color: rgba(0, 13, 26, 0.15);
   width: 100%;
   opacity: 5;
-`;
-
-export const Title = styled.h2`
-  color: #000d1a;
-  font-size: 3rem;
-  @media (max-width: 768px) {
-    font-size: 2.4rem;
-    text-align: center;
-  }
 `;
 
 // Container de cardsData2(aulas)
@@ -107,6 +114,7 @@ export const CardSpecialContainer = styled.div`
   margin-bottom: 6rem;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 `;
 
 export const CardSpecial = styled.div`

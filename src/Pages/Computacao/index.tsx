@@ -18,8 +18,8 @@ import {
   CarouselButton,
   CarouselWrapper,
   CardContainer,
-  Indicators, 
-  Indicator
+  Indicators,
+  Indicator,
 } from "./style";
 import CardP from "../../Components/CardP";
 import setinhal from "../../Assets/Computacao/setinhal.png";
@@ -31,8 +31,8 @@ import CssIcon from "../../Assets/Computacao/CSS.svg";
 import JsIcon from "../../Assets/Computacao/JAVASCRIPT.svg";
 import TsIcon from "../../Assets/Computacao/TYPESCRIPT.svg";
 import ReactIcon from "../../Assets/Computacao/REACT.svg";
-import setaEsquerda from "../../Assets/esq.png"
-import setaDireita from "../../Assets/dir.png"
+import setaEsquerda from "../../Assets/esq.png";
+import setaDireita from "../../Assets/dir.png";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -51,9 +51,9 @@ const Computacao: React.FC = () => {
   };
 
   const handlePrev = () => {
-      setStartIndex((prevIndex) =>
-          prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
-      );
+    setStartIndex((prevIndex) =>
+      prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
+    );
   };
 
   const selectedStyle = "optionA";
@@ -79,7 +79,6 @@ const Computacao: React.FC = () => {
 
       <TitleContainer>
         <Title>Carta de serviços</Title>
-        <StyledHr />
       </TitleContainer>
 
       {/* Card isolado centralizado na tela */}
@@ -104,40 +103,53 @@ const Computacao: React.FC = () => {
       </TechContainer>
 
       <CarouselWrapper>
-                <CarouselButton onClick={handlePrev}><img src={setaEsquerda} alt="Anterior" /></CarouselButton>
-                
-                <CardContainer>
-                    <Card>
-                        <CardContent>
-                            {projectsData
-                                .slice(startIndex, startIndex + ITEMS_PER_PAGE)
-                                .concat(projectsData.slice(0, Math.max(0, ITEMS_PER_PAGE - (projectsData.length - startIndex))))
-                                .map((project, index) => (
-                                    <CardP
-                                        key={startIndex + index}
-                                        title={project.title}
-                                        img={project.img}
-                                        description={project.description}
-                                        link={project.link}
-                                        info={project.info}
-                                        members={project.members}
-                                        isExpanded={expandedCard === startIndex + index}
-                                        onClick={() => handleCardClick(startIndex + index)}
-                                        styleChoice={selectedStyle}
-                                    />
-                                ))}
-                        </CardContent>
-                    </Card>
-                </CardContainer>
+        <CarouselButton onClick={handlePrev}>
+          <img src={setaEsquerda} alt="Anterior" />
+        </CarouselButton>
 
-                <CarouselButton onClick={handleNext}> <img src={setaDireita} alt="Próximo" /></CarouselButton>
-            </CarouselWrapper>
-
-            <Indicators>
-                {projectsData.map((_, index) => (
-                    <Indicator key={index} active={index === startIndex} />
+        <CardContainer>
+          <Card>
+            <CardContent>
+              {projectsData
+                .slice(startIndex, startIndex + ITEMS_PER_PAGE)
+                .concat(
+                  projectsData.slice(
+                    0,
+                    Math.max(
+                      0,
+                      ITEMS_PER_PAGE - (projectsData.length - startIndex)
+                    )
+                  )
+                )
+                .map((project, index) => (
+                  <CardP
+                    key={startIndex + index}
+                    title={project.title}
+                    img={project.img}
+                    description={project.description}
+                    link={project.link}
+                    info={project.info}
+                    members={project.members}
+                    isExpanded={expandedCard === startIndex + index}
+                    onClick={() => handleCardClick(startIndex + index)}
+                    styleChoice={selectedStyle}
+                  />
                 ))}
-            </Indicators>
+            </CardContent>
+          </Card>
+        </CardContainer>
+
+        <CarouselButton onClick={handleNext}>
+          {" "}
+          <img src={setaDireita} alt="Próximo" />
+        </CarouselButton>
+      </CarouselWrapper>
+
+      <Indicators>
+        {projectsData.map((_, index) => (
+          <Indicator key={index} active={index === startIndex} />
+        ))}
+      </Indicators>
 
       <ContactSection>
         <ContactText>Quer colocar seu projeto em prática?</ContactText>

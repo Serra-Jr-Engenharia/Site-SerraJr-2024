@@ -7,8 +7,9 @@ export const CardSpecialContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 80%;
-  margin: 0 auto;
-
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const CardSpecial = styled.div`
@@ -24,12 +25,11 @@ export const CardSpecial = styled.div`
   position: relative;
   margin-bottom: 5rem;
 
-  
   &:hover {
     background: linear-gradient(
       to right bottom,
-      #A000B9,
-      #000D19
+      #a000b9,
+      #000d19
     ); // Gradiente invertido
     transform: scale(1.01);
   }
@@ -64,36 +64,36 @@ export const CardSpecial = styled.div`
     margin-top: 0.5rem;
   }
   &:nth-child(2) p.description-card {
-      margin-top: 0.5rem;
+    margin-top: 0.5rem;
   }
-  
+
   &:nth-child(3) p.description-card {
-      margin-top: 0%.6;
+    margin-top: 0%.6;
   }
-  
+
   &:nth-child(4) p.description-card {
-  margin-top: 0.5rem;
+    margin-top: 0.5rem;
   }
   &:nth-child(5) p.description-card {
-  margin-top: 0.5rem;
+    margin-top: 0.5rem;
   }
   &:nth-child(6) p.description-card {
-  margin-top: -1rem;
+    margin-top: -1rem;
   }
   &:nth-child(6) p.title-card {
-          margin-top: 2rem;
-          font-size: 1.7rem;
+    margin-top: 2rem;
+    font-size: 1.7rem;
   }
   &:nth-child(7) p.description-card {
-      margin-top: 0.5rem;
+    margin-top: 0.5rem;
   }
-  
+
   &:hover p.title-card {
     color: white;
   }
-  
+
   &:hover p.description-card {
-  color: white;
+    color: white;
   }
 
   // Imagem adicional setas
@@ -105,7 +105,7 @@ export const CardSpecial = styled.div`
     height: 42px;
   }
   &:nth-child(6) .setinha {
-      margin-top: 7rem;
+    margin-top: 7rem;
   }
 `;
 
@@ -123,7 +123,7 @@ export const ContactText = styled.p`
   margin-bottom: 1rem;
 `;
 export const ContactButton = styled.a`
-  background: linear-gradient(90deg,#A000B9, #000D19 100%);
+  background: linear-gradient(90deg, #a000b9, #000d19 100%);
   padding: 0.5rem 2rem;
   border-radius: 4rem;
   color: white;
@@ -133,10 +133,85 @@ export const ContactButton = styled.a`
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 
   &:hover {
-    background: linear-gradient(
-      90deg,
-rgb(224, 32, 254), #000D19 100%
-    );
+    background: linear-gradient(90deg, rgb(224, 32, 254), #000d19 100%);
     transform: scale(1.05);
+  }
+`;
+
+export const Title = styled.h2`
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  color: #000d1a;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(to right, purple, black);
+  }
+`;
+
+export const TitleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
+export const CardContainer = styled.div`
+  display: flex;
+  align-self: auto;
+  height: 450px;
+  justify-content: center;
+  gap: 80px;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+`;
+
+export const Card = styled.div`
+  width: 350px;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: filter 0.4s ease, transform 0.4s ease;
+
+  img {
+    position: absolute;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  p {
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    margin: 0;
+    height: 100px;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.01)
+    );
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
   }
 `;
