@@ -17,6 +17,13 @@ export const Content = styled.div`
 export const TitleContainer = styled.div`
   padding: 40px;
   height: 200px;
+  img {
+    margin-top: 2rem;
+    padding: 1rem;
+    max-width: 17%;
+    border-radius: 5px;
+  }
+
 `;
 
 export const StyledHr = styled.hr`
@@ -32,12 +39,14 @@ export const Card = styled.div`
 `;
 
 export const CarouselWrapper = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
   width: 100%;
+
 `;
 
 export const CarouselButton = styled.button`
@@ -103,6 +112,17 @@ export const CardSpecialContainer = styled.div`
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const CardSpecial = styled.div`
@@ -132,6 +152,7 @@ export const CardSpecial = styled.div`
     padding: 1rem;
     max-width: 17%;
     border-radius: 5px;
+
   }
 
   p.title-card {
@@ -142,6 +163,12 @@ export const CardSpecial = styled.div`
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.7rem;
+      top: -8rem;
+    }
+
   }
 
   p.description-card {
@@ -152,6 +179,11 @@ export const CardSpecial = styled.div`
     color: gray;
     font-size: 1rem;
     width: 335px;
+
+    @media (max-width: 768px) {
+      width: 345px;
+    }
+
   }
   &:nth-child(1) p.description-card {
     margin-top: 0.5rem;
@@ -179,6 +211,7 @@ export const CardSpecial = styled.div`
     margin-top: 9rem;
     width: 42px;
     height: 42px;
+
   }
 `;
 
@@ -212,5 +245,21 @@ export const ContactButton = styled.a`
       rgba(189, 63, 1, 0.85) 100%
     );
     transform: scale(1.05);
+  }
+`;
+
+export const ResponsiveDiv = styled.div`
+  height: 150vh;
+
+  @media (max-width: 1024px) {
+    height: 150vh;
+  }
+
+  @media (max-width: 768px) {
+    height: 280vh;
+  }
+
+  @media (max-width: 480px) {
+    height: 280vh;
   }
 `;

@@ -16,8 +16,9 @@ import {
   CarouselWrapper,
   CardContainer,
   Indicators, 
+  ResponsiveDiv,
   Indicator
-} from "../Mecanica/style"; // Importando os estilos de Computação
+} from "../Mecanica/style"; // Importando os estilos
 import image43 from "../../Assets/Mecanica/image 43.png";
 import image44 from "../../Assets/Mecanica/image 44.png";
 import image45 from "../../Assets/Mecanica/image 45.png";
@@ -89,7 +90,7 @@ const Mecanica: React.FC = () => {
         <StyledHr />
       </TitleContainer>
       </div>
-      <div style={{ height: "150vh" }}>
+      <ResponsiveDiv>
         <CardSpecialContainer>
           {cardsData3.map((card, index) => (
             <CardSpecial key={index}>
@@ -101,7 +102,8 @@ const Mecanica: React.FC = () => {
             </CardSpecial>
           ))}
         </CardSpecialContainer>
-      </div>
+      </ResponsiveDiv>
+
 
       <CarouselWrapper>
                       <CarouselButton onClick={handlePrev}><img src={setaEsquerda} alt="Anterior" /></CarouselButton>
