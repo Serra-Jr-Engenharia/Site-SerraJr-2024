@@ -1,9 +1,6 @@
 import { styled } from "styled-components";
-import { width } from "../../../../Services/config";
-import { VscNoNewline } from "react-icons/vsc";
 
 export const Container = styled.div `
-    margin-top: 50px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -26,14 +23,13 @@ export const RightContent = styled.div `
 
 export const LeftContent = styled.div `
     margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 1100px) {
         display: none;
     }
-`
-
-export const CardContent = styled.div `
-
 `
 
 export const Title = styled.p `
@@ -108,8 +104,8 @@ export const Button = styled.button`
 `
 
 export const Image = styled.img`
-    margin-top: -100px;
     width: 450px;
+    height: 400px;
 `
 
 export const Icon = styled.img`

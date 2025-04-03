@@ -27,7 +27,7 @@ const DesktopNavBar: React.FC = () =>{
                     <Link to='/'>Home</Link>
                 </HeaderLi>
                 <HeaderLi>
-                    <Link to='/quemSomos'>Sobre Nós</Link>
+                    <Link to='/SobreNos'>Sobre Nós</Link>
                 </HeaderLi>
                 <HeaderLi>
                     <SubMenuContainer onClick={() => setSubMenu(!subMenu)}>

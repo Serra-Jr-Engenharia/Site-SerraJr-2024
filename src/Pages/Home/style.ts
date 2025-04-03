@@ -13,4 +13,5 @@ export const Content = styled.div`
     rgba(4, 173, 215, 0.1) 42%,
     rgba(253, 99, 0, 0.1) 70%
   );
+  gap: 80px;
 `;

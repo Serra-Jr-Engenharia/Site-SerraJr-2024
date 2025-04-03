@@ -18,7 +18,7 @@ const MobileNavBar: React.FC<MobileNavBar> = ({status, toogle}) =>{
                 <Link onClick={() => toogle(!status)} to='/'>Home</Link>
             </LinkContainer>
             <LinkContainer>
-                <Link onClick={() => toogle(!status)} to='/quemSomos'>Sobre Nós</Link>
+                <Link onClick={() => toogle(!status)} to='/SobreNos'>Sobre Nós</Link>
             </LinkContainer>
             <LinkContainer>
                 <Link onClick={() => toogle(!status)} to='/computacao'>Computação</Link>

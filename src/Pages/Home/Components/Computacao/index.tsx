@@ -1,11 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Container, Title, Text, Card, Button, CardContainer, RightContent, LeftContent, Image, Icon, CardContent } from "./style";
-import Celular from "../../../../Assets/Home/Celular.png"
+import { Container, Title, Text, Card, Button, CardContainer, RightContent, LeftContent, Image, Icon } from "./style";
+import Celular from "../../../../Assets/Home/celular.png"
 import Phone from "../../../../Assets/Home/phone.svg"
 import Website from "../../../../Assets/Home/website.svg"
 import WebSystem from "../../../../Assets/Home/webSystem.svg"
-import CardP from "../../../../Components/CardP"
 
 
 const Computacao: React.FC = () => {
@@ -13,9 +12,7 @@ const Computacao: React.FC = () => {
     
     const handleButtonClick = () => {
         navigate("/Computacao");
-            };
-
-    
+    };
 
     return(
         <Container>

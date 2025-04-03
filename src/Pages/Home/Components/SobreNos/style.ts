@@ -12,6 +12,7 @@ export const Container = styled.div`
     border-radius: 12px;
 
     background-color: #000D1A;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,1);
 
     @media (max-width: 1100px) {
         padding: 40px 0;
@@ -79,5 +80,35 @@ export const Retangulo = styled.hr`
     border: none;
 `
 export const Button = styled.button `
+    color: #000D19;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    padding: 20px;
+    height: 50px;
+    font-size: 16px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+ 
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+    background: linear-gradient(to right bottom,rgb(255, 173, 118),rgb(250, 132, 13));
+    transform: scale(1.01); 
+}
+
+    &:active{
+        transform: scale(0.98);
+    }
+
+    @media (max-width: 1100px) {
+        align-self: center;
+    }
 
 `;

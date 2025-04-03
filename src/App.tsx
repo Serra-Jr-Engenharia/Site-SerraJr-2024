@@ -10,15 +10,17 @@ import Computacao from './Pages/Computacao/index';
 import Mecanica from './Pages/Mecanica/index';
 import SerraLab from './Pages/SerraLab/index'
 import ErrorPage from './Pages/ErrorPage/index'
+import ScrollToTop from './Components/ScrollToTop';
 
 export default function App() {
   return (
     <div className='App'>
       <Router basename="">
+        <ScrollToTop />
         <Header />
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/quemSomos" element={<Sobre />} />
+            <Route path="/SobreNos" element={<Sobre />} />
             <Route path="/contatos" element={<Contato />} />
             <Route path="/computacao" element={<Computacao />} />
             <Route path="/mecanica" element={<Mecanica />} />

@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div `
     display: flex;
     justify-content: center;
-    margin-top: 50px;
 
     width: 100%;
 `;
@@ -20,6 +19,9 @@ export const LeftContent = styled.div `
 `;
 
 export const RightContent = styled.div `
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media (max-width: 1100px) {
         display: none;
     }
@@ -41,9 +43,6 @@ export const Text = styled.p `
     color: #505050;
     text-align: justify;
     
-    
-
-
 `;
 
 export const Card = styled.div `
@@ -90,7 +89,7 @@ export const Button = styled.button `
     transition: all 0.3s ease-in-out;
 
     &:hover {
-    background: linear-gradient(to right bottom,rgb(7, 38, 70), #04ADD7);  // Gradiente invertido
+    background: linear-gradient(to right bottom, #bd3f01,rgb(255, 161, 114));  // Gradiente invertido
     transform: scale(1.01); 
 }
 
@@ -105,22 +104,20 @@ export const Button = styled.button `
 `;
 
 export const Image = styled.img `
-    margin-top: -100px;
     width: 450px;
+    height: 400px;
 
 `;
 
 export const CardText = styled.div `
     margin: 0; 
 
-    
 `;
 
 export const Icon = styled.img `
     width: 50px;
     height: 50px;
     margin-right: 15px;
-    
     
 
     

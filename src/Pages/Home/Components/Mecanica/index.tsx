@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Title, Text, Card, Button, CardContainer, RightContent, LeftContent, Image, Icon, CardText } from "./style";
-import Computador from "../../../../Assets/Home/Computador.png";
+import Computador from "../../../../Assets/Home/monitor.png";
 import ImageManutencao from '../../../../Assets/Home/manutencao.svg';
 import ImageAutomacao from '../../../../Assets/Home/automacao.svg';
 import ImageDesenho from '../../../../Assets/Home/desenho.svg';

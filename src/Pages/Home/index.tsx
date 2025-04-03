@@ -3,7 +3,7 @@ import Computacao from './Components/Computacao'
 import Mecanica from "./Components/Mecanica"
 import SobreNos from './Components/SobreNos'
 import Banner from "./Components/Banner"
-import GearsBackground from './Components/GearsBackground' 
+import GearsBackground from './Components/Gears/GearsBackground' 
 
 import { Content } from './style'
 import Slider from '../../Components/Slider';
