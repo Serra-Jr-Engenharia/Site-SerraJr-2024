@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SloganTextContainer = styled.div`
     width: 100%;
+    height: fit-content;
 
     .writer{
         font-family: 'Poppins';

@@ -11,7 +11,7 @@ export const Banner = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
 
   @media (max-width: 800px) {
     flex-direction: column;
@@ -75,8 +75,9 @@ export const Card = styled.div`
   border-radius: 15px;
 
   @media (max-width: 400px) {
-    width: 250px;
+    width: 300px;
     height: auto;
+
   }
 `;
 export const Text = styled.p`
@@ -105,8 +106,7 @@ export const CardsContainer = styled.div`
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 1024px) {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 0;
     padding-top: 30px;
     padding-bottom: 30px;
   }

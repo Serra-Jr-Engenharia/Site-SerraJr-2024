@@ -98,11 +98,10 @@ const Mecanica: React.FC = () => {
     <Content>
       <Banner />
 
-      <TitleContainer>
-        <Title>Carta de serviços</Title>
-      </TitleContainer>
-      
-      <ResponsiveDiv>
+        <TitleContainer>
+          <Title>Carta de serviços</Title>
+        </TitleContainer>
+        
         <CardSpecialContainer>
           {cardsData3.map((card, index) => (
             <CardSpecial key={index}>
@@ -114,7 +113,6 @@ const Mecanica: React.FC = () => {
             </CardSpecial>
           ))}
         </CardSpecialContainer>
-      </ResponsiveDiv>
 
       <TechContainer>
         <TechIcon src={Python} alt="Python" />

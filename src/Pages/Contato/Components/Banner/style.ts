@@ -33,10 +33,11 @@ export const Slogan = styled.p`
   font-weight: 600;
   display: flex;
   margin: 0;
-  margin-top: 40px;
+  margin-top: 100px;
 
   @media (max-width: 600px) {
     font-size: 2rem;
+    margin-top: 0;
   }
 `;
 

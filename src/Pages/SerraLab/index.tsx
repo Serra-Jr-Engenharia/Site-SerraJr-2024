@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import {
   CardSpecialContainer,
   CardSpecial,
+  CardSpecialAux,
   ContactSection,
   ContactText,
   ContactButton,
@@ -114,10 +115,14 @@ const SerraLab: React.FC = () => {
         <CardSpecialContainer>
           {cardsData4.map((card, index) => (
             <CardSpecial key={index}>
-              <img src={card.img} alt={card.title} />
-              <p className="title-card">{card.title}</p>
-              <p className="description-card">{card.description}</p>
-              <img className="setinha" src={seta2} alt="Seta direita" />
+              <CardSpecialAux>
+                <img src={card.img} alt={card.title} />
+                <p className="title-card">{card.title}</p>
+              </CardSpecialAux>
+              <CardSpecialAux>
+                <img className="setinha" src={seta2} alt="Seta direita" />
+                <p className="description-card">{card.description}</p>
+              </CardSpecialAux>
             </CardSpecial>
           ))}
         </CardSpecialContainer>

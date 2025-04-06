@@ -111,8 +111,8 @@ const Computacao: React.FC = () => {
         <TechIcon src={TsIcon} alt="TypeScript" />
         <TechIcon src={ReactIcon} alt="ReactJS" />
         <TechIcon src={NodeJs} alt="NodeJS" />
-        <TechIcon src={Tailwind} alt="Tailwind" />
         <TechIcon src={styledComponent} alt="StyledComponent" />
+        <TechIcon src={Tailwind} alt="Tailwind" />
       </TechContainer>
 
       <CarouselWrapper>

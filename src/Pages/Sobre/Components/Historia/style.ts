@@ -51,6 +51,7 @@ export const Container = styled.div`
         .swiper-button-prev {
             display: none;
         }
+        margin: 50px 0;
     }
 
 `;

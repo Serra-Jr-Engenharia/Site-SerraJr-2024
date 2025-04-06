@@ -13,22 +13,21 @@ export const Content = styled.div`
     rgba(253, 99, 0, 0.1) 70%
   );
 `;
-
 export const CardSpecialContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-  grid-gap: 20px; /* Espaçamento entre os cards */
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  margin-bottom: 6rem;
+  gap: 2rem;
+  flex-wrap: wrap;
   margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+
 `;
 
 export const CardSpecial = styled.div`
   width: 500px;
-  height: 230px;
+  height: 250px;
   background: transparent;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -47,59 +46,6 @@ export const CardSpecial = styled.div`
     transform: scale(1.01);
   }
 
-  img {
-    margin-top: 0.5em;
-    padding: 1rem;
-    max-width: 17%;
-    border-radius: 5px;
-  }
-
-  p.title-card {
-    position: relative;
-    top: -7rem;
-    margin-left: 7.6rem;
-    color: black;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-
-  p.description-card {
-    position: relative;
-    text-align: justify;
-    top: -6rem;
-    left: 7.6rem;
-    color: gray;
-    font-size: 1rem;
-    width: 335px;
-  }
-  &:nth-child(1) p.description-card {
-    margin-top: 0.5rem;
-  }
-  &:nth-child(2) p.description-card {
-    margin-top: 0.5rem;
-  }
-
-  &:nth-child(3) p.description-card {
-    margin-top: 0%.6;
-  }
-
-  &:nth-child(4) p.description-card {
-    margin-top: 0.5rem;
-  }
-  &:nth-child(5) p.description-card {
-    margin-top: 0.5rem;
-  }
-  &:nth-child(6) p.description-card {
-    margin-top: -1rem;
-  }
-  &:nth-child(6) p.title-card {
-    margin-top: 2rem;
-    font-size: 1.7rem;
-  }
-  &:nth-child(7) p.description-card {
-    margin-top: 0.5rem;
-  }
 
   &:hover p.title-card {
     color: white;
@@ -109,18 +55,62 @@ export const CardSpecial = styled.div`
     color: white;
   }
 
-  // Imagem adicional setas
-  .setinha {
-    position: absolute;
-    margin-left: 2rem;
-    margin-top: 6rem;
-    width: 42px;
-    height: 42px;
-  }
-  &:nth-child(6) .setinha {
-    margin-top: 7rem;
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 250px;
   }
 `;
+
+export const CardSpecialAux = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 20px;
+
+  .title-card {
+    color: black;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-left: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+  }
+  } 
+
+  img {
+    max-width: 17%;
+
+  }
+
+  .description-card {
+    text-align: justify;
+    color: gray;
+    font-size: 1rem;
+    margin-left: 35px;
+
+    @media (max-width: 768px) {
+      margin-left: 30px;
+  }
+
+  }
+
+  .setinha {
+    width: 42px;
+    height: 42px;
+    margin-left: 20px;
+
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+      margin-left: 10px;
+    }
+  }
+
+
+
+`
 
 export const ContactSection = styled.div`
   display: flex;
@@ -128,12 +118,19 @@ export const ContactSection = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 6rem;
+  text-align: center;
 `;
 export const ContactText = styled.p`
   color: #000d1a;
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
+
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `;
 export const ContactButton = styled.button`
   background: linear-gradient(90deg,rgba(0, 24, 48, 0.72) , #001830, #000D1A);
@@ -169,6 +166,11 @@ export const Title = styled.h2`
     height: 4px;
     background: linear-gradient(to right, #1a3350 , #001830);
   }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    text-align: center;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -181,13 +183,17 @@ export const TitleContainer = styled.div`
 export const CardContainer = styled.div`
   display: flex;
   align-self: auto;
-  height: 450px;
+  height: 100%;
   justify-content: center;
   gap: 80px;
   padding: 20px;
   flex-wrap: wrap;
   margin-top: 2rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 20px
+  }
 `;
 
 export const Card = styled.div`

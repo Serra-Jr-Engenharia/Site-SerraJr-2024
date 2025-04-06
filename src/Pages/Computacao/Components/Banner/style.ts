@@ -8,10 +8,18 @@ export const Presentation = styled.div`
   background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
   height: 65vh;
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+  }
+
 `;
 
 export const Slogan = styled.p`
@@ -26,7 +34,8 @@ export const Slogan = styled.p`
   @media (max-width: 850px) {
     font-size: 2.5rem;
     text-align: center;
-    margin-left: 0;
+    margin: 0;
+    height: fit-content;
     
   }
 `;
@@ -39,6 +48,6 @@ export const BannerImg = styled.img`
   @media (max-width: 850px) {
     width: 300px;
     height: 300px;
-    margin-right: 0;
+    margin: 0;
   }
 `;

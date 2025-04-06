@@ -135,6 +135,16 @@ export const CardSpecial = styled.div`
   cursor: pointer;
   position: relative;
 
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 350px;
+  }
+
+  @media (max-width: 500px) {
+    width: 330px;
+    height: 340px;
+  }
+
   &:hover {
     background: linear-gradient(
       to right bottom,
@@ -150,6 +160,10 @@ export const CardSpecial = styled.div`
     max-width: 17%;
     border-radius: 5px;
 
+    @media (max-width: 768px) {
+      max-width: 15%;
+      margin-top: 1rem;
+    }
   }
 
   p.title-card {
@@ -162,10 +176,16 @@ export const CardSpecial = styled.div`
     margin-bottom: 1rem;
 
     @media (max-width: 768px) {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       top: -8rem;
+      margin-top: 2rem;
     }
 
+    @media (max-width: 500px) {
+      font-size: 1.2rem;
+      top: -7rem;
+      margin-left: 6rem;
+    }
   }
 
   p.description-card {
@@ -178,21 +198,18 @@ export const CardSpecial = styled.div`
     width: 335px;
 
     @media (max-width: 768px) {
-      width: 345px;
+      width: 250px;
+      
     }
 
-  }
-  &:nth-child(1) p.description-card {
-    margin-top: 0.5rem;
+    @media (max-width: 500px) {
+      width: 220px;
+      font-size: 0.85rem;
+      top: -8rem;
+      left: 6rem;
+    }
   }
 
-  &:nth-child(3) p.description-card {
-    margin-top: 2rem;
-  }
-
-  &:nth-child(3) p.title-card {
-    margin-top: 3rem;
-  }
   &:hover p.title-card {
     color: white;
   }
@@ -209,6 +226,12 @@ export const CardSpecial = styled.div`
     width: 42px;
     height: 42px;
 
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+      margin-left: 1rem;
+      margin-top: 7rem;
+    }
   }
 `;
 
@@ -218,12 +241,18 @@ export const ContactSection = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 6rem;
+  text-align: center;
 `;
 export const ContactText = styled.p`
   color: #000d1a;
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `;
 export const ContactButton = styled.button`
   background: linear-gradient(90deg, #ffbd9d 0%, #bd3f01 100%);
@@ -247,25 +276,6 @@ export const ContactButton = styled.button`
   }
 `;
 
-export const ResponsiveDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 150vh;
-
-  @media (max-width: 1024px) {
-    height: 150vh;
-  }
-
-  @media (max-width: 768px) {
-    height: 280vh;
-  }
-
-  @media (max-width: 480px) {
-    height: 280vh;
-  }
-`;
 
 export const TechContainer = styled.div`
   display: flex;

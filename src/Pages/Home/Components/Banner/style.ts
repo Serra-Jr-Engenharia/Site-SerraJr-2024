@@ -11,7 +11,7 @@ export const Presentation = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
 
   @media (max-width: 1100px) {
     height: 40vh;
