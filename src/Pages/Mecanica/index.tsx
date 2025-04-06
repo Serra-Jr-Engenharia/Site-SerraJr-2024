@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Banner from "./Components/Banner/index";
 import Slider from "../../Components/Slider";
+import { useNavigate } from "react-router-dom";
 import {
   Title,
   TitleContainer,
@@ -8,7 +9,6 @@ import {
   CardSpecial,
   ContactSection,
   ContactText,
-  StyledHr,
   ContactButton,
   Card,
   CardContent,
@@ -17,7 +17,10 @@ import {
   CardContainer,
   Indicators, 
   ResponsiveDiv,
-  Indicator
+  Indicator,
+  Content,
+  TechContainer,
+  TechIcon
 } from "../Mecanica/style"; // Importando os estilos
 import image43 from "../../Assets/Mecanica/image 43.png";
 import image44 from "../../Assets/Mecanica/image 44.png";
@@ -25,6 +28,10 @@ import image45 from "../../Assets/Mecanica/image 45.png";
 import image46 from "../../Assets/Mecanica/image 46.png";
 import seta1 from "../../Assets/Mecanica/seta laranja 4.png";
 import seta2 from "../../Assets/Mecanica/seta laranja 4 - Copia.png";
+import Python from '../../Assets/Mecanica/python.svg'
+import SolidWorks from '../../Assets/Mecanica/solidworks.svg'
+import Autocad from '../../Assets/Mecanica/autocad.svg'
+import Arduino from '../../Assets/Mecanica/arduino.svg'
 
 import CardP from "../../Components/CardP";
 import setaEsquerda from "../../Assets/esq.png"
@@ -62,34 +69,39 @@ const ITEMS_PER_PAGE = 6;
 import { projectsData, Project } from "./projectsData";
 
 const Mecanica: React.FC = () => {
+  const navigate = useNavigate();
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
-    const [startIndex, setStartIndex] = useState(0);
-  
-    const handleCardClick = (index: number) => {
-      setExpandedCard(index === expandedCard ? null : index);
-    };
-  
-    const handleNext = () => {
-      setStartIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
-    };
-  
-    const handlePrev = () => {
-        setStartIndex((prevIndex) =>
-            prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
-        );
-    };
-  
-    const selectedStyle = "optionB";
+  const [startIndex, setStartIndex] = useState(0);
+
+  const handleCardClick = (index: number) => {
+    setExpandedCard(index === expandedCard ? null : index);
+  };
+
+  const handleNext = () => {
+    setStartIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
+  };
+
+  const handlePrev = () => {
+      setStartIndex((prevIndex) =>
+          prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
+      );
+  };
+
+  const handleButtonClick = () => {
+    navigate("/contatos");
+  };
+
+
+  const selectedStyle = "optionB";
 
   return (
-    <>
+    <Content>
       <Banner />
-      <div style={{ height: "30vh", width: "100%" }}>
-        <TitleContainer>
+
+      <TitleContainer>
         <Title>Carta de serviços</Title>
-        <StyledHr />
       </TitleContainer>
-      </div>
+      
       <ResponsiveDiv>
         <CardSpecialContainer>
           {cardsData3.map((card, index) => (
@@ -103,6 +115,14 @@ const Mecanica: React.FC = () => {
           ))}
         </CardSpecialContainer>
       </ResponsiveDiv>
+
+      <TechContainer>
+        <TechIcon src={Python} alt="Python" />
+        <TechIcon src={SolidWorks} alt="SolidWorks" />
+        <TechIcon src={Autocad} alt="Autocad" />
+        <TechIcon src={Arduino} alt="Arduino" />
+      </TechContainer>
+
 
 
       <CarouselWrapper>
@@ -143,10 +163,10 @@ const Mecanica: React.FC = () => {
 
       <ContactSection>
         <ContactText>Quer colocar seu projeto em prática?</ContactText>
-        <ContactButton href="/contatos">Entre em Contato</ContactButton>
+        <ContactButton onClick={handleButtonClick}>Entre em Contato</ContactButton>
       </ContactSection>
       <Slider />
-    </>
+    </Content>
   );
 };
 

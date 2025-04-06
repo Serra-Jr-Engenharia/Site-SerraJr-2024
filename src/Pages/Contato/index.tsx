@@ -106,95 +106,93 @@ const Contato: React.FC = () => {
       };
 
       // Chamada api emailjs
-      emailjs
-        .send(
-          "service_klhspdo",
-          "template_f2hj3sr",
-          templateParams,
-          "HRfoO7P69RR47ZQ0c"
-        )
-        .then(
-          () => {
-            setFormValues({ name: "", email: "", phone: "", message: "" });
-            alert("Email enviado com sucesso");
-          },
-          (err) => {
-            alert(`Erro ao enviar email${err}`);
-            console.log(err);
-          }
-        );
+      // emailjs
+      //   .send(
+      //     "service_klhspdo",
+      //     "template_f2hj3sr",
+      //     templateParams,
+      //     "HRfoO7P69RR47ZQ0c"
+      //   )
+      //   .then(
+      //     () => {
+      //       setFormValues({ name: "", email: "", phone: "", message: "" });
+      //       alert("Email enviado com sucesso");
+      //     },
+      //     (err) => {
+      //       alert(`Erro ao enviar email${err}`);
+      //       console.log(err);
+      //     }
+      //   );
 
       // Reseta o formulário
     }
   };
 
   return (
-    <>
-      <Content>
-        <Banner />
-        <Container>
-          <FormContainer>
-            <Form style={{}} onSubmit={handleSubmit}>
-              <Input
-                type="text"
-                name="name"
-                placeholder="Nome Completo"
-                value={formValues.name}
-                onChange={handleChange}
-              />
-              {formErrors.name && (
-                <span style={{ color: "red" }}>{formErrors.name}</span>
-              )}
+    <Content>
+      <Banner />
+      <Container>
+        <FormContainer>
+          <Form style={{}} onSubmit={handleSubmit}>
+            <Input
+              type="text"
+              name="name"
+              placeholder="Nome Completo"
+              value={formValues.name}
+              onChange={handleChange}
+            />
+            {formErrors.name && (
+              <span style={{ color: "red" }}>{formErrors.name}</span>
+            )}
 
-              <Input
-                type="email"
-                name="email"
-                placeholder="E-mail"
-                value={formValues.email}
-                onChange={handleChange}
-              />
-              {formErrors.email && (
-                <span style={{ color: "red" }}>{formErrors.email}</span>
-              )}
+            <Input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              value={formValues.email}
+              onChange={handleChange}
+            />
+            {formErrors.email && (
+              <span style={{ color: "red" }}>{formErrors.email}</span>
+            )}
 
-              <Input
-                type="tel"
-                name="phone"
-                placeholder="Telefone"
-                value={formValues.phone}
-                onChange={handleChange}
-              />
-              {formErrors.phone && (
-                <span style={{ color: "red" }}>{formErrors.phone}</span>
-              )}
+            <Input
+              type="tel"
+              name="phone"
+              placeholder="Telefone"
+              value={formValues.phone}
+              onChange={handleChange}
+            />
+            {formErrors.phone && (
+              <span style={{ color: "red" }}>{formErrors.phone}</span>
+            )}
 
-              <Textarea
-                name="message"
-                placeholder="Mensagem"
-                rows={1}
-                value={formValues.message}
-                onChange={handleChange}
-              />
-              {formErrors.message && (
-                <span style={{ color: "red" }}>{formErrors.message}</span>
-              )}
+            <Textarea
+              name="message"
+              placeholder="Mensagem"
+              rows={1}
+              value={formValues.message}
+              onChange={handleChange}
+            />
+            {formErrors.message && (
+              <span style={{ color: "red" }}>{formErrors.message}</span>
+            )}
 
-              <Button type="submit">Enviar</Button>
-            </Form>
-          </FormContainer>
-          <InformationContainer>
-            {DATA.map((data) => (
-              <InformationCont>
-                <InformationImg src={data.image} />
-                <InformationText>{data.text}</InformationText>
-              </InformationCont>
-            ))}
-          </InformationContainer>
-        </Container>
-        <Mapa />
-        <Slider />
-      </Content>
-    </>
+            <Button type="submit">Enviar</Button>
+          </Form>
+        </FormContainer>
+        <InformationContainer>
+          {DATA.map((data) => (
+            <InformationCont>
+              <InformationImg src={data.image} />
+              <InformationText>{data.text}</InformationText>
+            </InformationCont>
+          ))}
+        </InformationContainer>
+      </Container>
+      <Mapa />
+      <Slider />
+    </Content>
   );
 };
 

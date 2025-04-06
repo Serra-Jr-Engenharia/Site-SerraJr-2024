@@ -13,7 +13,7 @@ export const SloganTextContainer = styled.div`
     .writer-cursor{
         font-family: 'Courier Prime';
         font-size: 15px;
-        color: purple;
+        color: #1a3350;
         font-weight: 700;
         animation: blink 0.5s infinite;
     }

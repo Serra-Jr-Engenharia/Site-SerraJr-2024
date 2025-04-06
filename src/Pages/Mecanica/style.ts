@@ -6,24 +6,19 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgb(4, 173, 215);
   background: linear-gradient(
     to right bottom,
-    rgba(4, 173, 215, 0.2) 42%,
-    rgba(253, 99, 0, 0.2) 70%
+    rgba(4, 173, 215, 0.1) 42%,
+    rgba(253, 99, 0, 0.1) 70%
   );
-  padding: 40px;
 `;
 
 export const TitleContainer = styled.div`
-  padding: 40px;
-  height: 200px;
-  img {
-    margin-top: 2rem;
-    padding: 1rem;
-    max-width: 17%;
-    border-radius: 5px;
-  }
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
 
 export const StyledHr = styled.hr`
@@ -98,31 +93,34 @@ export const CardContent = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: "#000D1A";
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  color: #000d1a;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, #bd3f01 0%, #bd3f01 29%, #000d1a 100%);
+  }
 `;
 
 export const CardSpecialContainer = styled.div`
   position: relative;
-  top: 60px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); //
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-bottom: 6rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  @media (max-width: 500px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 `;
 
 export const CardSpecial = styled.div`
@@ -136,7 +134,6 @@ export const CardSpecial = styled.div`
   flex-direction: column;
   cursor: pointer;
   position: relative;
-  margin-bottom: 5rem;
 
   &:hover {
     background: linear-gradient(
@@ -228,7 +225,7 @@ export const ContactText = styled.p`
   font-size: 2rem;
   margin-bottom: 1rem;
 `;
-export const ContactButton = styled.a`
+export const ContactButton = styled.button`
   background: linear-gradient(90deg, #ffbd9d 0%, #bd3f01 100%);
   padding: 0.5rem 2rem;
   border-radius: 4rem;
@@ -237,6 +234,8 @@ export const ContactButton = styled.a`
   font-weight: 700;
   text-decoration: none;
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border: 0;
+  cursor: pointer;
 
   &:hover {
     background: linear-gradient(
@@ -249,6 +248,10 @@ export const ContactButton = styled.a`
 `;
 
 export const ResponsiveDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 150vh;
 
   @media (max-width: 1024px) {
@@ -262,4 +265,18 @@ export const ResponsiveDiv = styled.div`
   @media (max-width: 480px) {
     height: 280vh;
   }
+`;
+
+export const TechContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+`;
+
+export const TechIcon = styled.img`
+  width: 70px;
+  height: 70px;
 `;

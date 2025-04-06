@@ -3,14 +3,14 @@
 <rect width="68" height="54.7743" fill="url(#pattern0_750_902)"/>
 </mask>
 <g mask="url(#mask0_750_902)">
-<rect x="7" y="1.61133" width="61" height="25.7761" fill="#A000B9"/>
-<rect x="7" y="1.61133" width="61" height="25.7761" fill="#A000B9"/>
-<rect x="7" y="1.61133" width="61" height="25.7761" fill="#A000B9"/>
-<rect x="7" y="1.61133" width="61" height="25.7761" fill="#A000B9"/>
-<rect x="7" y="27.3867" width="61" height="25.7761" fill="#A000B9"/>
-<rect x="7" y="27.3867" width="61" height="25.7761" fill="#A000B9"/>
-<rect x="7" y="27.3867" width="61" height="25.7761" fill="#A000B9"/>
-<rect x="7" y="27.3867" width="61" height="25.7761" fill="#1E0023"/>
+<rect x="7" y="1.61133" width="61" height="25.7761" fill="#04ADD7"/>
+<rect x="7" y="1.61133" width="61" height="25.7761" fill="#04ADD7"/>
+<rect x="7" y="1.61133" width="61" height="25.7761" fill="#04ADD7"/>
+<rect x="7" y="1.61133" width="61" height="25.7761" fill="#04ADD7"/>
+<rect x="7" y="27.3867" width="61" height="25.7761" fill="#04ADD7"/>
+<rect x="7" y="27.3867" width="61" height="25.7761" fill="#04ADD7"/>
+<rect x="7" y="27.3867" width="61" height="25.7761" fill="#04ADD7"/>
+<rect x="7" y="27.900" width="61" height="25.7761" fill="#001830"/>
 </g>
 <defs>
 <pattern id="pattern0_750_902" patternContentUnits="objectBoundingBox" width="1" height="1">

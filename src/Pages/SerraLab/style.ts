@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+export const Content = styled.div`
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(4, 173, 215);
+  background: linear-gradient(
+    to right bottom,
+    rgba(4, 173, 215, 0.1) 42%,
+    rgba(253, 99, 0, 0.1) 70%
+  );
+`;
+
 export const CardSpecialContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Duas colunas */
@@ -23,13 +37,12 @@ export const CardSpecial = styled.div`
   flex-direction: column;
   cursor: pointer;
   position: relative;
-  margin-bottom: 5rem;
 
   &:hover {
     background: linear-gradient(
       to right bottom,
-      #a000b9,
-      #000d19
+      #000D1A,
+      #001830
     ); // Gradiente invertido
     transform: scale(1.01);
   }
@@ -122,8 +135,8 @@ export const ContactText = styled.p`
   font-size: 2rem;
   margin-bottom: 1rem;
 `;
-export const ContactButton = styled.a`
-  background: linear-gradient(90deg, #a000b9, #000d19 100%);
+export const ContactButton = styled.button`
+  background: linear-gradient(90deg,rgba(0, 24, 48, 0.72) , #001830, #000D1A);
   padding: 0.5rem 2rem;
   border-radius: 4rem;
   color: white;
@@ -131,9 +144,11 @@ export const ContactButton = styled.a`
   font-weight: 700;
   text-decoration: none;
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
 
   &:hover {
-    background: linear-gradient(90deg, rgb(224, 32, 254), #000d19 100%);
+    background: linear-gradient(90deg, rgba(30, 54, 78, 0.72), #1a3350, #000D1A);
     transform: scale(1.05);
   }
 `;
@@ -152,7 +167,7 @@ export const Title = styled.h2`
     content: "";
     display: block;
     height: 4px;
-    background: linear-gradient(to right, purple, black);
+    background: linear-gradient(to right, #1a3350 , #001830);
   }
 `;
 

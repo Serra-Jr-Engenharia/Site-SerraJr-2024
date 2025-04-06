@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Slider from "../../Components/Slider";
 import Banner from "./Components/Banner/index";
+import { useNavigate } from "react-router-dom";
 import {
   Title,
   TitleContainer,
@@ -13,7 +14,7 @@ import {
   ContactSection,
   ContactText,
   ContactButton,
-  StyledHr,
+  Content,
   Card,
   CarouselButton,
   CarouselWrapper,
@@ -26,11 +27,14 @@ import setinhal from "../../Assets/Computacao/setinhal.png";
 import setinhar from "../../Assets/Computacao/setinhar.png";
 import http from "../../Assets/Computacao/http.png";
 import notebook from "../../Assets/Computacao/notebook.png";
-import HtmlIcon from "../../Assets/Computacao/HTML.svg";
-import CssIcon from "../../Assets/Computacao/CSS.svg";
-import JsIcon from "../../Assets/Computacao/JAVASCRIPT.svg";
-import TsIcon from "../../Assets/Computacao/TYPESCRIPT.svg";
-import ReactIcon from "../../Assets/Computacao/REACT.svg";
+import HtmlIcon from "../../Assets/Computacao/html.svg";
+import CssIcon from "../../Assets/Computacao/css.svg";
+import JsIcon from "../../Assets/Computacao/javascript.svg";
+import TsIcon from "../../Assets/Computacao/typescript.svg";
+import styledComponent from "../../Assets/Computacao/styledComponent.svg";
+import ReactIcon from "../../Assets/Computacao/react.svg";
+import NodeJs from "../../Assets/Computacao/node-js.svg";
+import Tailwind from "../../Assets/Computacao/tailwind.svg";
 import setaEsquerda from "../../Assets/esq.png";
 import setaDireita from "../../Assets/dir.png";
 
@@ -39,6 +43,7 @@ const ITEMS_PER_PAGE = 6;
 import { projectsData, Project } from "./projectsData";
 
 const Computacao: React.FC = () => {
+  const navigate = useNavigate();
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [startIndex, setStartIndex] = useState(0);
 
@@ -55,6 +60,11 @@ const Computacao: React.FC = () => {
       prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
     );
   };
+
+  const handleButtonClick = () => {
+    navigate("/contatos");
+  };
+
 
   const selectedStyle = "optionA";
 
@@ -74,7 +84,7 @@ const Computacao: React.FC = () => {
   ];
 
   return (
-    <>
+    <Content>
       <Banner />
 
       <TitleContainer>
@@ -99,7 +109,10 @@ const Computacao: React.FC = () => {
         <TechIcon src={CssIcon} alt="CSS3" />
         <TechIcon src={JsIcon} alt="JavaScript" />
         <TechIcon src={TsIcon} alt="TypeScript" />
-        <TechIcon src={ReactIcon} alt="React" />
+        <TechIcon src={ReactIcon} alt="ReactJS" />
+        <TechIcon src={NodeJs} alt="NodeJS" />
+        <TechIcon src={Tailwind} alt="Tailwind" />
+        <TechIcon src={styledComponent} alt="StyledComponent" />
       </TechContainer>
 
       <CarouselWrapper>
@@ -153,11 +166,12 @@ const Computacao: React.FC = () => {
 
       <ContactSection>
         <ContactText>Quer colocar seu projeto em prática?</ContactText>
-        <ContactButton href="/contatos">Entre em Contato</ContactButton>
+
+        <ContactButton onClick={handleButtonClick}>Entre em Contato</ContactButton>
       </ContactSection>
 
       <Slider />
-    </>
+    </Content>
   );
 };
 

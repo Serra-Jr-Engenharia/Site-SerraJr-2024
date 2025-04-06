@@ -259,7 +259,7 @@ export const ContactText = styled.p`
     text-align: center;
   }
 `;
-export const ContactButton = styled.a`
+export const ContactButton = styled.button`
   background: linear-gradient(90deg, #04add7 0%, #049fc7 29%, #000d1a 100%);
   padding: 0.5rem 2rem;
   border-radius: 4rem;
@@ -268,6 +268,8 @@ export const ContactButton = styled.a`
   font-weight: 700;
   text-decoration: none;
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border: 0;
+  cursor: pointer;
 
   &:hover {
     background: linear-gradient(

@@ -1,5 +1,6 @@
 import Banner from "./Components/Banner";
 import Slider from "../../Components/Slider";
+import { useNavigate } from "react-router-dom";
 import {
   CardSpecialContainer,
   CardSpecial,
@@ -10,6 +11,7 @@ import {
   TitleContainer,
   CardContainer,
   Card,
+  Content,
 } from "../SerraLab/style"; // Importando os estilos de Computação
 import image51 from "../../Assets/SerraLab/Group 51.svg";
 import image50 from "../../Assets/SerraLab/Group 50.svg";
@@ -18,8 +20,7 @@ import image48 from "../../Assets/SerraLab/Group 48.svg";
 import image47 from "../../Assets/SerraLab/Group 47.svg";
 import image46 from "../../Assets/SerraLab/Group 46.svg";
 import image45 from "../../Assets/SerraLab/Group 45.svg";
-import seta1 from "../../Assets/SerraLab/Mask group.svg";
-import seta2 from "../../Assets/SerraLab/Mask group - Copia.svg";
+import seta2 from "../../Assets/SerraLab/seta.svg";
 import image1 from "../../Assets/SerraLab/Group 25.png";
 import { useState } from "react";
 
@@ -67,12 +68,20 @@ const cardsData4 = [
   },
 ];
 
+
+
 const SerraLab: React.FC = () => {
   const [hovered, setHovered] = useState<number | null>(null);
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/contatos");
+  };
+
   return (
-    <>
-      <Banner />
-      <div>
+    <Content>
+        <Banner />
+
         <TitleContainer>
           <Title>O QUE É O SERRA LAB ?</Title>
         </TitleContainer>
@@ -97,30 +106,29 @@ const SerraLab: React.FC = () => {
             </Card>
           ))}
         </CardContainer>
-      </div>
-      <div style={{ height: "240vh" }}>
+
         <TitleContainer>
           <Title>Carta de Serviços</Title>
         </TitleContainer>
+        
         <CardSpecialContainer>
           {cardsData4.map((card, index) => (
             <CardSpecial key={index}>
               <img src={card.img} alt={card.title} />
               <p className="title-card">{card.title}</p>
               <p className="description-card">{card.description}</p>
-              <img className="setinha" src={seta1} alt="Seta esquerda" />
               <img className="setinha" src={seta2} alt="Seta direita" />
             </CardSpecial>
           ))}
         </CardSpecialContainer>
-      </div>
 
       <ContactSection>
         <ContactText>Quer colocar seu projeto em prática?</ContactText>
-        <ContactButton href="/contatos">Entre em Contato</ContactButton>
+        <ContactButton onClick={handleButtonClick}>Entre em Contato</ContactButton>
       </ContactSection>
+
       <Slider />
-    </>
+    </Content>
   );
 };
 
