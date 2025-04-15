@@ -235,4 +235,9 @@ export const Card = styled.div`
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 400px;
+  }
 `;

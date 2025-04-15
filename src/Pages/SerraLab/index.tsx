@@ -22,8 +22,10 @@ import image47 from "../../Assets/SerraLab/Group 47.svg";
 import image46 from "../../Assets/SerraLab/Group 46.svg";
 import image45 from "../../Assets/SerraLab/Group 45.svg";
 import seta2 from "../../Assets/SerraLab/seta.svg";
-import image1 from "../../Assets/SerraLab/Group 25.png";
 import { useState } from "react";
+import image from "../../Assets/SerraLab/group30.jpeg";
+import image2 from "../../Assets/SerraLab/group31.jpeg";
+import image3 from "../../Assets/SerraLab/group32.jpeg";
 
 const cardsData4 = [
   {
@@ -69,7 +71,23 @@ const cardsData4 = [
   },
 ];
 
-
+const cardImagesData = [
+  {
+    id: 1,
+    image: image,
+    text: "O Serra Lab é um espaço de inovação e criatividade, onde estudantes e profissionais podem desenvolver projetos em diversas áreas, como eletrônica, mecânica, design e muito mais.",
+  },
+  {
+    id: 2,
+    image: image2,
+    text: "Ele oferece ferramentas avançadas, como impressoras 3D, cortadoras CNC e equipamentos de prototipagem, possibilitando a criação de soluções personalizadas. ",
+  },
+  {
+    id: 3,
+    image: image3,
+    text: "O objetivo do SerraLab é promover a inovação, a fabricação digital e a colaboração, aproximando o meio acadêmico de empreendedores, profissionais criativos e a comunidade em geral.",
+  },
+];
 
 const SerraLab: React.FC = () => {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -81,55 +99,53 @@ const SerraLab: React.FC = () => {
 
   return (
     <Content>
-        <Banner />
+      <Banner />
 
-        <TitleContainer>
-          <Title>O QUE É O SERRA LAB ?</Title>
-        </TitleContainer>
+      <TitleContainer>
+        <Title>O QUE É O SERRA LAB ?</Title>
+      </TitleContainer>
 
-        <CardContainer>
-          {[1, 2, 3].map((id) => (
-            <Card
-              key={id}
-              onMouseEnter={() => setHovered(id)}
-              onMouseLeave={() => setHovered(null)}
-              style={{
-                filter:
-                  hovered !== null && hovered !== id ? "blur(1px)" : "none",
-              }}
-            >
-              <img src={image1} alt="Grupo SerraLab" />
-              <p>
-                Ele oferece ferramentas avançadas, como impressoras 3D,
-                cortadoras CNC e equipamentos de prototipagem, possibilitando a
-                criação de soluções personalizadas.
-              </p>
-            </Card>
-          ))}
-        </CardContainer>
+      <CardContainer>
+        {cardImagesData.map((test) => (
+          <Card
+            key={test.id}
+            onMouseEnter={() => setHovered(test.id)}
+            onMouseLeave={() => setHovered(null)}
+            style={{
+              filter:
+                hovered !== null && hovered !== test.id ? "blur(1px)" : "none",
+            }}
+          >
+            <img src={test.image} alt="Grupo SerraLab" />
+            <p>{test.text}</p>
+          </Card>
+        ))}
+      </CardContainer>
 
-        <TitleContainer>
-          <Title>Carta de Serviços</Title>
-        </TitleContainer>
-        
-        <CardSpecialContainer>
-          {cardsData4.map((card, index) => (
-            <CardSpecial key={index}>
-              <CardSpecialAux>
-                <img src={card.img} alt={card.title} />
-                <p className="title-card">{card.title}</p>
-              </CardSpecialAux>
-              <CardSpecialAux>
-                <img className="setinha" src={seta2} alt="Seta direita" />
-                <p className="description-card">{card.description}</p>
-              </CardSpecialAux>
-            </CardSpecial>
-          ))}
-        </CardSpecialContainer>
+      <TitleContainer>
+        <Title>Carta de Serviços</Title>
+      </TitleContainer>
+
+      <CardSpecialContainer>
+        {cardsData4.map((card, index) => (
+          <CardSpecial key={index}>
+            <CardSpecialAux>
+              <img src={card.img} alt={card.title} />
+              <p className="title-card">{card.title}</p>
+            </CardSpecialAux>
+            <CardSpecialAux>
+              <img className="setinha" src={seta2} alt="Seta direita" />
+              <p className="description-card">{card.description}</p>
+            </CardSpecialAux>
+          </CardSpecial>
+        ))}
+      </CardSpecialContainer>
 
       <ContactSection>
         <ContactText>Quer colocar seu projeto em prática?</ContactText>
-        <ContactButton onClick={handleButtonClick}>Entre em Contato</ContactButton>
+        <ContactButton onClick={handleButtonClick}>
+          Entre em Contato
+        </ContactButton>
       </ContactSection>
 
       <Slider />
