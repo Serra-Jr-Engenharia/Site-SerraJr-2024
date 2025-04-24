@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import backgroung from "../../Assets/background-popup.jpg"
+import { width } from "../../Services/config";
+
 
 export const PopupContainer = styled.div`
   position: fixed;
@@ -33,6 +35,10 @@ export const PopupContent = styled.div`
   justify-content: center;
 
   cursor: default;
+
+  overflow-y: auto;
+  scrollbar-width: thin;
+
 `;
 
 export const CloseButton = styled.button`
@@ -43,6 +49,22 @@ export const CloseButton = styled.button`
   border: none;
   font-size: 18px;
   cursor: pointer;
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    font-size: 2rem;
+    right: 2%;
+  };
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+    font-size: 2rem;
+    right: 2%;
+  };
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: 3.5rem;
+    right: 2%;
+  };
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    font-size: 6rem;
+    right: 2%;
+  }
 `;
 
 
@@ -52,6 +74,35 @@ export const Image = styled.img`
   position: absolute;
   transform: translateY(-50%); 
   z-index: 2;
+  @media screen and (max-width: ${width.mobile}) {    
+    width: 50%;
+    margin-bottom: 10vw;
+  };
+  @media screen and (min-width: ${width.mobile})and (max-width: ${width.largeMobile}) {    
+    width: 50%;
+    margin-bottom: 25vh;
+  };
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    width: 28%;
+    margin-bottom: 40%;
+  };
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {    
+    width: 20%;
+    margin-bottom: 16%;
+  };
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+    width: 20%;
+    margin-bottom: 8%;
+  };
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    width: 20%;
+      margin-bottom: 1%;
+  };
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+      width: 20%;
+      margin-bottom: 4%;
+  }
 `
 
 export const Title = styled.p`
@@ -61,6 +112,15 @@ export const Title = styled.p`
   font-size: 2.5rem;
   margin-bottom: 150px;
   margin-top: 0;
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {    
+    font-size: 2rem;
+  };
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: 3.5rem;
+  };
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+        font-size: 6rem;
+  }
 `
 
 export const InfoContent = styled.div`
@@ -69,13 +129,39 @@ export const InfoContent = styled.div`
   width: 85%;
   border-radius: 10px;
   z-index: 1;
+  @media screen and (max-width: ${width.largeMobile}) {    
+      width: 90%;
+  };
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    border-radius: 30px;
+  };
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+     border-radius: 50px;
+  }
 `
 
 export const Info = styled.p`
   color: white;
   padding: 20px;
   font-size: 0.9rem;
-  
+  @media screen and (max-width: ${width.largeMobile}) {    
+    font-size: 0.8rem;
+  };
+  @media screen and (max-width: ${width.tablet}) {    
+    font-size: 0.8rem;
+  };
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {    
+    font-size: 0.8rem;
+  };
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+    font-size: 1rem;
+  };
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: 1.5rem;
+  };
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+        font-size: 2.5rem;
+  }
 `
 
 export const Members = styled.p`
@@ -85,11 +171,29 @@ export const Members = styled.p`
 
 export const MembersTitle = styled.p`
   font-size: 1.2rem;
+  @media screen and (max-width: ${width.largeMobile}) {    
+      font-size: 1.2rem;
+  };
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: 2rem;
+  };
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+        font-size: 3rem;
+  }
 `
 
 export const Member = styled.li`
   border-radius: 8px;
   text-align: left;
+  @media screen and (min-width: ${width.mobile}) and (max-width: ${width.largeMobile}) {    
+      font-size: 0.8rem;
+  };
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: 1.7rem;
+  };
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+        font-size: 2.5rem;
+  }
 `
 
 export const MembersList = styled.ul`
@@ -101,6 +205,17 @@ export const MembersList = styled.ul`
   margin: 10px 0 0 0;
   width: 100%;                 
   box-sizing: border-box;
+  align-items: center;
+  
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    grid-template-columns: repeat(3, 1fr); 
+    margin-bottom: 2%;
+  };
+
+  @media screen and (max-width: ${width.largeMobile}) {    
+    grid-template-columns: repeat(2, 1fr); 
+    margin-bottom: 5%;
+    };
 `;
 
 
@@ -126,6 +241,36 @@ export const Button = styled.button`
 
   &:active {
     transform: scale(0.98);
+  }
+  @media screen and (max-width: ${width.mobile}) {    
+    margin-bottom: -90vh;
+  };
+  @media screen and (min-width: ${width.mobile}) and (max-width: ${width.largeMobile}) {    
+    margin-bottom: -35vh;
+  };
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    margin-bottom: -12%;
+  };
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {    
+    margin-bottom: -7%;
+  };
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+    margin-bottom: -7%;
+    width: 20%;
+    height: 8%;
+  };
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    margin-bottom: -7%;
+    width: 20%;
+    height: 5%;
+    font-size: 1.5rem;
+  };
+
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    margin-bottom: -7%;
+    width: 20%;
+    height: 5%;
+    font-size: 2.3rem;
   }
 `;
 

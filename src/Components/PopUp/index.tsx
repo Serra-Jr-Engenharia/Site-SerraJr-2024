@@ -29,9 +29,10 @@ interface PopupProps {
   link: string;
   members: MemberInfo[];  
   onClose: () => void;
+  showLinkButton?: boolean;
 }
 
-const Popup: React.FC<PopupProps> = ({ onClose, title, img, info, members, link }) => {
+const Popup: React.FC<PopupProps> = ({ onClose, title, img, info, members, link, showLinkButton }) => {
   return (
     <PopupContainer>
       <PopupContent>
@@ -62,9 +63,12 @@ const Popup: React.FC<PopupProps> = ({ onClose, title, img, info, members, link 
           </Members>
         )}
 
-        <Button onClick={() => window.open(link, "_blank")}>
-          Acesse o projeto
-        </Button>
+    {showLinkButton !== false && (
+      <Button onClick={() => window.open(link, "_blank")}>
+        Acesse o projeto
+      </Button>
+    )}
+
       </PopupContent>
     </PopupContainer>
   );

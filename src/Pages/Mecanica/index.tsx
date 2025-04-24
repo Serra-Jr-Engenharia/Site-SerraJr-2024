@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Banner from "./Components/Banner/index";
 import Slider from "../../Components/Slider";
 import { useNavigate } from "react-router-dom";
@@ -64,14 +64,13 @@ const cardsData3 = [
   },
 ];
 
-const ITEMS_PER_PAGE = 6;
-
 import { projectsData, Project } from "./projectsData";
 
 const Mecanica: React.FC = () => {
   const navigate = useNavigate();
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [startIndex, setStartIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(6);
 
   const handleCardClick = (index: number) => {
     setExpandedCard(index === expandedCard ? null : index);
@@ -93,6 +92,28 @@ const Mecanica: React.FC = () => {
 
 
   const selectedStyle = "optionB";
+
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      const width = window.innerWidth;
+      if (width <= 500) {
+        setItemsPerPage(1);
+      } else if (width <= 770) {
+        setItemsPerPage(2);
+      } else if (width <= 820) {
+        setItemsPerPage(3);
+      } else if (width <= 1030) {
+        setItemsPerPage(4);
+      } else {
+        setItemsPerPage(6); 
+      }
+    };
+  
+    updateItemsPerPage(); 
+  
+    window.addEventListener("resize", updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
 
   return (
     <Content>
@@ -129,9 +150,14 @@ const Mecanica: React.FC = () => {
                       <CardContainer>
                           <Card>
                               <CardContent>
-                                  {projectsData
-                                      .slice(startIndex, startIndex + ITEMS_PER_PAGE)
-                                      .concat(projectsData.slice(0, Math.max(0, ITEMS_PER_PAGE - (projectsData.length - startIndex))))
+                              {projectsData
+                                      .slice(startIndex, startIndex + itemsPerPage)
+                                      .concat(
+                                        projectsData.slice(
+                                          0,
+                                          Math.max(0, itemsPerPage - (projectsData.length - startIndex))
+                                        )
+                                      )
                                       .map((project, index) => (
                                           <CardP
                                               key={startIndex + index}
@@ -144,6 +170,8 @@ const Mecanica: React.FC = () => {
                                               isExpanded={expandedCard === startIndex + index}
                                               onClick={() => handleCardClick(startIndex + index)}
                                               styleChoice={selectedStyle}
+                                              showLinkButton={false} 
+                                              showTopRightImage={false}
                                           />
                                       ))}
                               </CardContent>

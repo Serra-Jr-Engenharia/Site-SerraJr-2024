@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Slider from "../../Components/Slider";
 import Banner from "./Components/Banner/index";
 import { useNavigate } from "react-router-dom";
@@ -38,7 +38,6 @@ import Tailwind from "../../Assets/Computacao/tailwind.svg";
 import setaEsquerda from "../../Assets/esq.png";
 import setaDireita from "../../Assets/dir.png";
 
-const ITEMS_PER_PAGE = 6;
 
 import { projectsData, Project } from "./projectsData";
 
@@ -46,6 +45,7 @@ const Computacao: React.FC = () => {
   const navigate = useNavigate();
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [startIndex, setStartIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(6);
 
   const handleCardClick = (index: number) => {
     setExpandedCard(index === expandedCard ? null : index);
@@ -82,6 +82,29 @@ const Computacao: React.FC = () => {
         "Com auxílio das mais completas linguagens de programação, fornecemos aplicativos e sistemas próprios para a sua empresa que irão acelerar e auxiliar internamente no gerenciamento e desenvolvimento do seu negócio.",
     },
   ];
+
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      const width = window.innerWidth;
+      if (width <= 500) {
+        setItemsPerPage(1);
+      } else if (width <= 770) {
+        setItemsPerPage(2);
+      } else if (width <= 820) {
+        setItemsPerPage(3);
+      } else if (width <= 1030) {
+        setItemsPerPage(4);
+      } else {
+        setItemsPerPage(6); 
+      }
+    };
+  
+    updateItemsPerPage(); 
+  
+    window.addEventListener("resize", updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
+
 
   return (
     <Content>
@@ -123,17 +146,14 @@ const Computacao: React.FC = () => {
         <CardContainer>
           <Card>
             <CardContent>
-              {projectsData
-                .slice(startIndex, startIndex + ITEMS_PER_PAGE)
-                .concat(
-                  projectsData.slice(
-                    0,
-                    Math.max(
-                      0,
-                      ITEMS_PER_PAGE - (projectsData.length - startIndex)
-                    )
-                  )
+            {projectsData
+              .slice(startIndex, startIndex + itemsPerPage)
+              .concat(
+                projectsData.slice(
+                  0,
+                  Math.max(0, itemsPerPage - (projectsData.length - startIndex))
                 )
+              )
                 .map((project, index) => (
                   <CardP
                     key={startIndex + index}
@@ -146,6 +166,8 @@ const Computacao: React.FC = () => {
                     isExpanded={expandedCard === startIndex + index}
                     onClick={() => handleCardClick(startIndex + index)}
                     styleChoice={selectedStyle}
+                    showLinkButton={true}
+                    showTopRightImage={true}
                   />
                 ))}
             </CardContent>

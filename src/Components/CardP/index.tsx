@@ -31,10 +31,12 @@ interface CardProps {
   members: MemberInfo[];
   gradientColor?: string;      
   backgroundColor?: string;
-  styleChoice?: keyof typeof styleOptions;  
+  styleChoice?: keyof typeof styleOptions;
+  showLinkButton?: boolean;       
+  showTopRightImage?: boolean;  
 }
 
-const CardP: React.FC<CardProps> = ({ title, img, description, link, info, members, isExpanded, onClick, styleChoice = "optionA" }) => {
+const CardP: React.FC<CardProps> = ({ title, img, description, link, info, members, isExpanded, onClick, styleChoice = "optionA", showLinkButton, showTopRightImage }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const handlePopupOpen = () => {
@@ -58,7 +60,8 @@ const CardP: React.FC<CardProps> = ({ title, img, description, link, info, membe
           <Button isExpanded={isExpanded} onClick={handlePopupOpen}>
             Saiba Mais <SaibaMais src={setasb}/>
           </Button>
-          <TopRightImage
+          {isExpanded && showTopRightImage && (
+            <TopRightImage
             src={setahorizontal} 
             alt="Abrir Link"
             onClick={(e) => {
@@ -66,6 +69,8 @@ const CardP: React.FC<CardProps> = ({ title, img, description, link, info, membe
               window.open(link, "_blank"); 
             }}
           />
+          )}
+          
         </>
       )}
       {showPopup && (
@@ -76,6 +81,7 @@ const CardP: React.FC<CardProps> = ({ title, img, description, link, info, membe
           info={info}
           members={members}
           link={link}
+          showLinkButton={showLinkButton}
         />
       )}        
 
