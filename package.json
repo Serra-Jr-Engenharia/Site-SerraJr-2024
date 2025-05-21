@@ -1,5 +1,6 @@
 {
   "name": "site-serrajr",
+  "homepage": "https://serra-jr-engenharia.github.io/Site-SerraJr-2024",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +9,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "lite-server"
+    "start": "lite-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
