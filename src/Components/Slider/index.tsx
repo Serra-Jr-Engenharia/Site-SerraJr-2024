@@ -7,11 +7,11 @@ import Ligajr from "../../Assets/Sliders/ligajr.svg";
 import Voitto from "../../Assets/Sliders/voitto.svg";
 import WiseUp from "../../Assets/Sliders/wiseup.svg";
 
-import Marquee from "react-marquee-slider";
+import Marquee from "react-fast-marquee";
 
 const Slider: FunctionComponent = () => {
   return (
-    <Marquee velocity={50} >
+    <Marquee>
       <SliderContainer>
         <img src={InovaFri} alt="" width={160} />
       </SliderContainer>

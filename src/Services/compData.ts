@@ -1,6 +1,5 @@
 import friburguenseImage from '../Assets/CompPage/friburguense.svg'
 import tmfImage from '../Assets/CompPage/projeto-tmf.svg'
-import milJoiasImage from '../Assets/CompPage/miljoias.svg'
 import cervejelasImage from '../Assets/CompPage/cervejelas.svg'
 import odsQuizImage from '../Assets/CompPage/odsquiz.svg'
 import etarserraImage from '../Assets/CompPage/etarserra.svg'

@@ -39,7 +39,7 @@ import setaEsquerda from "../../Assets/esq.png";
 import setaDireita from "../../Assets/dir.png";
 
 
-import { projectsData, Project } from "./projectsData";
+import { projectsData } from "./projectsData";
 
 const Computacao: React.FC = () => {
   const navigate = useNavigate();

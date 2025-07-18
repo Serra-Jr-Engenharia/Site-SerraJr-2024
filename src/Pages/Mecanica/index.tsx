@@ -16,7 +16,6 @@ import {
   CarouselWrapper,
   CardContainer,
   Indicators, 
-  ResponsiveDiv,
   Indicator,
   Content,
   TechContainer,
@@ -64,7 +63,7 @@ const cardsData3 = [
   },
 ];
 
-import { projectsData, Project } from "./projectsData";
+import { projectsData } from "./projectsData";
 
 const Mecanica: React.FC = () => {
   const navigate = useNavigate();
@@ -164,7 +163,7 @@ const Mecanica: React.FC = () => {
                                               title={project.title}
                                               img={project.img}
                                               description={project.description}
-                                              link={project.link}
+                                              link={project.link || ""}
                                               info={project.info}
                                               members={project.members}
                                               isExpanded={expandedCard === startIndex + index}

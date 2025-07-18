@@ -24,6 +24,7 @@ export interface Project {
     description: string;
     info: string;
     members: Member[]; 
+    link?: string;
 }
   
 

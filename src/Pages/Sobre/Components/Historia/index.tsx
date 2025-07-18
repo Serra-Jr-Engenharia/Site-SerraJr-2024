@@ -2,22 +2,13 @@ import React from "react"
 import Membros from '../../../../Assets/SobreNos/membros-1.webp'
 import Membros2 from '../../../../Assets/SobreNos//membros-2.webp'
 
-// import SetaEsquerda from '../../../../Assets/AboutUs/setaEsquerda.png';
-// import SetaDireita from '../../../../Assets/AboutUs/setaDireita.png';
-
 import {Container, TextAbout, Image, Retangulo, CardContainer, Title, StyledSwiperSlide} from './style'
 
 
 import { Navigation, Pagination } from 'swiper/modules';
 
 import { Swiper } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-
+import './swiper.css'
 
 const Historia: React.FC = () => {
     const content = [

@@ -5,6 +5,7 @@ import agenda from "../../Assets/Contact/agenda.svg";
 import email from "../../Assets/Contact/email.svg";
 import telefone from "../../Assets/Contact/telefone.svg";
 import localizacao from "../../Assets/Contact/localizacao.svg";
+import emailjs from "@emailjs/browser";
 
 //import emailjs from "@emailjs/browser";
 
@@ -106,23 +107,23 @@ const Contato: React.FC = () => {
       };
 
       // Chamada api emailjs
-      // emailjs
-      //   .send(
-      //     "service_klhspdo",
-      //     "template_f2hj3sr",
-      //     templateParams,
-      //     "HRfoO7P69RR47ZQ0c"
-      //   )
-      //   .then(
-      //     () => {
-      //       setFormValues({ name: "", email: "", phone: "", message: "" });
-      //       alert("Email enviado com sucesso");
-      //     },
-      //     (err) => {
-      //       alert(`Erro ao enviar email${err}`);
-      //       console.log(err);
-      //     }
-      //   );
+      emailjs
+        .send(
+          "service_klhspdo",
+          "template_f2hj3sr",
+          templateParams,
+          "HRfoO7P69RR47ZQ0c"
+        )
+        .then(
+          () => {
+            setFormValues({ name: "", email: "", phone: "", message: "" });
+            alert("Email enviado com sucesso");
+          },
+          (err) => {
+            alert(`Erro ao enviar email${err}`);
+            console.log(err);
+          }
+        );
 
       // Reseta o formulário
     }

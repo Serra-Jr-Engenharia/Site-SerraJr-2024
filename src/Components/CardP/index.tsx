@@ -77,13 +77,13 @@ const CardP: React.FC<CardProps> = ({ title, img, description, link, info, membe
         <Popup
           onClose={handlePopupClose}
           title={title}
-          img={img}
-          info={info}
+          img={img || ""}
+          info={info || ""}
           members={members}
           link={link}
           showLinkButton={showLinkButton}
         />
-      )}        
+      )}   
 
       
     </Container>
