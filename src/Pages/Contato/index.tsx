@@ -7,8 +7,6 @@ import telefone from "../../Assets/Contact/telefone.svg";
 import localizacao from "../../Assets/Contact/localizacao.svg";
 import emailjs from "@emailjs/browser";
 
-//import emailjs from "@emailjs/browser";
-
 import {
   Content,
   FormContainer,
@@ -31,6 +29,17 @@ interface FormValues {
   phone: string;
   message: string;
 }
+
+// valida presença de envs em dev
+function requireEnv(key: string): string {
+  const val = (import.meta as any).env?.[key];
+  if (!val) throw new Error(`Variável de ambiente ausente: ${key}`);
+  return val;
+}
+
+const SERVICE_ID = requireEnv("VITE_EMAILJS_SERVICE_ID");
+const TEMPLATE_ID = requireEnv("VITE_EMAILJS_TEMPLATE_ID");
+const PUBLIC_KEY = requireEnv("VITE_EMAILJS_PUBLIC_KEY");
 
 const DATA = [
   {
@@ -59,7 +68,8 @@ const Contato: React.FC = () => {
     message: "",
   });
 
-  const [formErrors, setFormErrors] = useState<Partial<FormValues>>({}); // Partial torna todos os campos opcionais
+  const [formErrors, setFormErrors] = useState<Partial<FormValues>>({});
+  const [sending, setSending] = useState(false);
 
   const validate = () => {
     const errors: Partial<FormValues> = {};
@@ -74,9 +84,10 @@ const Contato: React.FC = () => {
       errors.email = "Digite um e-mail válido.";
     }
 
-    if (!formValues.phone.trim()) {
+    const onlyDigits = formValues.phone.replace(/\D/g, "");
+    if (!onlyDigits) {
       errors.phone = "O telefone é obrigatório.";
-    } else if (!/^\d{10,11}$/.test(formValues.phone)) {
+    } else if (!/^\d{10,11}$/.test(onlyDigits)) {
       errors.phone = "Digite um telefone válido (somente números).";
     }
 
@@ -85,7 +96,6 @@ const Contato: React.FC = () => {
     }
 
     setFormErrors(errors);
-
     return Object.keys(errors).length === 0;
   };
 
@@ -93,39 +103,36 @@ const Contato: React.FC = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+    setFormValues((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      const templateParams = {
-        from_name: formValues.name,
-        message: formValues.message,
-        email: formValues.email,
-        phone: formValues.phone,
-      };
+    if (!validate() || sending) return;
 
-      // Chamada api emailjs
-      emailjs
-        .send(
-          "service_klhspdo",
-          "template_f2hj3sr",
-          templateParams,
-          "HRfoO7P69RR47ZQ0c"
-        )
-        .then(
-          () => {
-            setFormValues({ name: "", email: "", phone: "", message: "" });
-            alert("Email enviado com sucesso");
-          },
-          (err) => {
-            alert(`Erro ao enviar email${err}`);
-            console.log(err);
-          }
-        );
+    setSending(true);
 
-      // Reseta o formulário
+    const templateParams = {
+      name: formValues.name,
+      time: new Date().toLocaleString("pt-BR"),
+      cellphone: formValues.phone.replace(/\D/g, ""),
+      message: formValues.message,
+      reply_to: formValues.email,
+      email: formValues.email,
+    };
+
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, {
+        publicKey: PUBLIC_KEY,
+      });
+      setFormValues({ name: "", email: "", phone: "", message: "" });
+      alert("Email enviado com sucesso");
+    } catch (err: any) {
+      console.error("EmailJS error:", err);
+      const msg = err?.text || err?.message || "Ocorreu um erro desconhecido.";
+      alert(`Erro ao enviar email: ${msg}`);
+    } finally {
+      setSending(false);
     }
   };
 
@@ -134,7 +141,7 @@ const Contato: React.FC = () => {
       <Banner />
       <Container>
         <FormContainer>
-          <Form style={{}} onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit}>
             <Input
               type="text"
               name="name"
@@ -179,12 +186,15 @@ const Contato: React.FC = () => {
               <span style={{ color: "red" }}>{formErrors.message}</span>
             )}
 
-            <Button type="submit">Enviar</Button>
+            <Button type="submit" disabled={sending}>
+              {sending ? "Enviando..." : "Enviar"}
+            </Button>
           </Form>
         </FormContainer>
+
         <InformationContainer>
-          {DATA.map((data) => (
-            <InformationCont>
+          {DATA.map((data, idx) => (
+            <InformationCont key={idx}>
               <InformationImg src={data.image} />
               <InformationText>{data.text}</InformationText>
             </InformationCont>
