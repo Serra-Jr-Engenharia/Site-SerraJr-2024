@@ -20,7 +20,7 @@ import {
   Content,
   TechContainer,
   TechIcon
-} from "../Mecanica/style"; // Importando os estilos
+} from "./style"; // Importando os estilos
 import image43 from "../../Assets/Mecanica/image 43.png";
 import image44 from "../../Assets/Mecanica/image 44.png";
 import image45 from "../../Assets/Mecanica/image 45.png";

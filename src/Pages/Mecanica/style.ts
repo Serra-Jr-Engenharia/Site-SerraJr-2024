@@ -34,14 +34,11 @@ export const Card = styled.div`
 `;
 
 export const CarouselWrapper = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   margin-top: 20px;
   width: 100%;
-
 `;
 
 export const CarouselButton = styled.button`
@@ -65,9 +62,12 @@ export const CarouselButton = styled.button`
 export const CardContainer = styled.div`
   display: flex;
   overflow: hidden;
-  width: 60%;
+
+  width: 80%;
+  max-width: 1200px; 
   justify-content: center;
 `;
+
 export const Indicators = styled.div`
   display: flex;
   justify-content: center;
@@ -86,10 +86,14 @@ export const Indicator = styled.span<{ active: boolean }>`
 export const CardContent = styled.div`
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  
+  align-items: stretch;
+
+  flex-wrap: nowrap;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
 `;
 
 export const Title = styled.h2`
